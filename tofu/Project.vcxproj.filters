@@ -76,6 +76,12 @@
     <Filter Include="Src\Application\Scene\TitleScene">
       <UniqueIdentifier>{6036b8f3-498e-401e-865a-f8632985b816}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\Asset">
+      <UniqueIdentifier>{32f13c0e-d693-446c-b173-f54242775676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Sound">
+      <UniqueIdentifier>{f86f6078-47d5-4051-92fb-0aaeefb4e1b3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -252,6 +258,12 @@
     <ClInclude Include="Src\Application\Scene\BaseScene\BaseScene.h">
       <Filter>Src\Application\Scene\BaseScene</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Application\Asset\AssetManager.h">
+      <Filter>Src\Application\Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Sound\SoundManager.h">
+      <Filter>Src\Application\Sound</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pch.cpp">
@@ -397,6 +409,12 @@
     </ClCompile>
     <ClCompile Include="Src\Application\Scene\BaseScene\BaseScene.cpp">
       <Filter>Src\Application\Scene\BaseScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Asset\AssetManager.cpp">
+      <Filter>Src\Application\Asset</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Sound\SoundManager.cpp">
+      <Filter>Src\Application\Sound</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
