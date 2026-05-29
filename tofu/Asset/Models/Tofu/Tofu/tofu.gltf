@@ -15,29 +15,23 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"Cube",
-			"rotation":[
-				0,
-				1,
-				0,
-				0
-			],
+			"name":"\u7acb\u65b9\u4f53",
 			"scale":[
-				-0.1434556096792221,
-				-0.10187599062919617,
-				-0.1434556096792221
+				0.6580958366394043,
+				0.4671424627304077,
+				0.6580958366394043
 			]
 		}
 	],
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"Material",
+			"name":"\u30de\u30c6\u30ea\u30a2\u30eb",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
-					0.8000074625015259,
-					0.7795550227165222,
-					0.6099602580070496,
+					0.7975789904594421,
+					0.8000229597091675,
+					0.6534203886985779,
 					1
 				],
 				"metallicFactor":0,
@@ -47,7 +41,7 @@
 	],
 	"meshes":[
 		{
-			"name":"Cube",
+			"name":"\u7acb\u65b9\u4f53",
 			"primitives":[
 				{
 					"attributes":{

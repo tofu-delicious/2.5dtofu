@@ -1,11 +1,14 @@
 ﻿#pragma once
 
-class BaseScene
+//カメラクラス
+class C_Camera;
+
+class C_BaseScene
 {
 public :
 
-	BaseScene()			 { Init(); }
-	virtual ~BaseScene() {}
+	C_BaseScene(){ Init(); }
+	virtual ~C_BaseScene() {}
 
 	void PreUpdate();
 	void Update();

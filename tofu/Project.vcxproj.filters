@@ -79,8 +79,38 @@
     <Filter Include="Src\Application\Asset">
       <UniqueIdentifier>{32f13c0e-d693-446c-b173-f54242775676}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Src\Application\Sound">
-      <UniqueIdentifier>{f86f6078-47d5-4051-92fb-0aaeefb4e1b3}</UniqueIdentifier>
+    <Filter Include="Src\Application\Scene\ResultScene">
+      <UniqueIdentifier>{1594e196-7bb6-4c7f-94d2-9d1cb0ee3966}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Scene\PauseScene">
+      <UniqueIdentifier>{1da8e05d-8cae-4434-b20e-fb8d6855e259}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Scene\SettingScene">
+      <UniqueIdentifier>{9e3dd95e-7cff-4ce8-838d-0239fe7e849e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\UI">
+      <UniqueIdentifier>{ef61dc67-cb82-4eee-a68f-8145ddccb440}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\UI\UIFade">
+      <UniqueIdentifier>{d1df8600-8e16-49a9-8814-0e0d0cc906d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\UI\UIAppearFade">
+      <UniqueIdentifier>{a910afa8-189c-4058-9bbd-8be03db4a96f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\UI\UIBase">
+      <UniqueIdentifier>{617c5f10-34e7-41d0-9af3-d30bd595a525}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object">
+      <UniqueIdentifier>{6696031e-cbca-4ee7-990c-e9be71ae4c53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Tofu">
+      <UniqueIdentifier>{ea15d842-e0dd-46be-a757-632eecf29ad2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\ObjectBase">
+      <UniqueIdentifier>{911ccabf-9f2e-42fd-b993-db0b36bf0ed9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Camera">
+      <UniqueIdentifier>{fb01c519-8b68-4ffa-b7cf-46f0a51c26fd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -261,8 +291,32 @@
     <ClInclude Include="Src\Application\Asset\AssetManager.h">
       <Filter>Src\Application\Asset</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Application\Sound\SoundManager.h">
-      <Filter>Src\Application\Sound</Filter>
+    <ClInclude Include="Src\Application\Scene\ResultScene\ResultScene.h">
+      <Filter>Src\Application\Scene\ResultScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Scene\PauseScene\PauseScene.h">
+      <Filter>Src\Application\Scene\PauseScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Scene\SettingScene\SettingScene.h">
+      <Filter>Src\Application\Scene\SettingScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\UI\UIFade\UIFade.h">
+      <Filter>Src\Application\UI\UIFade</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\UI\UIAppearFade\UIAppearFade.h">
+      <Filter>Src\Application\UI\UIAppearFade</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\UI\UIBase\UIBase.h">
+      <Filter>Src\Application\UI\UIBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Tofu\Tofu.h">
+      <Filter>Src\Application\Object\Tofu</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\ObjectBase\ObjectBase.h">
+      <Filter>Src\Application\Object\ObjectBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Camera\Camera.h">
+      <Filter>Src\Application\Camera</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -413,8 +467,32 @@
     <ClCompile Include="Src\Application\Asset\AssetManager.cpp">
       <Filter>Src\Application\Asset</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Application\Sound\SoundManager.cpp">
-      <Filter>Src\Application\Sound</Filter>
+    <ClCompile Include="Src\Application\Scene\ResultScene\ResultScene.cpp">
+      <Filter>Src\Application\Scene\ResultScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Scene\PauseScene\PauseScene.cpp">
+      <Filter>Src\Application\Scene\PauseScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Scene\SettingScene\SettingScene.cpp">
+      <Filter>Src\Application\Scene\SettingScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\UI\UIFade\UIFade.cpp">
+      <Filter>Src\Application\UI\UIFade</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\UI\UIAppearFade\UIAppearFade.cpp">
+      <Filter>Src\Application\UI\UIAppearFade</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\UI\UIBase\UIBase.cpp">
+      <Filter>Src\Application\UI\UIBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Tofu\Tofu.cpp">
+      <Filter>Src\Application\Object\Tofu</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\ObjectBase\ObjectBase.cpp">
+      <Filter>Src\Application\Object\ObjectBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Camera\Camera.cpp">
+      <Filter>Src\Application\Camera</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

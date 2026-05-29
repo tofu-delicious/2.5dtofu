@@ -37,7 +37,6 @@ void C_AssetManager::LoadPolygon(const std::string& a_keyword, const std::string
 	auto newPolygon = std::make_shared<KdSquarePolygon>();	//新規の領域を確保
 	newPolygon->SetMaterial(a_filePath);					//引数のポリゴンをロード
 	m_polygonMap[a_keyword] = newPolygon;					//ポリゴンマップに追加
-
 }
 
 void C_AssetManager::LoadModel(const std::string& a_keyword, const std::string& a_filePath)

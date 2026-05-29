@@ -274,12 +274,20 @@
     <ClInclude Include="..\Library\tinygltf\stb_image_write.h" />
     <ClInclude Include="..\Library\tinygltf\tiny_gltf.h" />
     <ClInclude Include="Src\Application\Asset\AssetManager.h" />
+    <ClInclude Include="Src\Application\Camera\Camera.h" />
     <ClInclude Include="Src\Application\main.h" />
+    <ClInclude Include="Src\Application\Object\ObjectBase\ObjectBase.h" />
+    <ClInclude Include="Src\Application\Object\Tofu\Tofu.h" />
     <ClInclude Include="Src\Application\Scene\BaseScene\BaseScene.h" />
     <ClInclude Include="Src\Application\Scene\GameScene\GameScene.h" />
+    <ClInclude Include="Src\Application\Scene\PauseScene\PauseScene.h" />
+    <ClInclude Include="Src\Application\Scene\ResultScene\ResultScene.h" />
     <ClInclude Include="Src\Application\Scene\SceneManager.h" />
+    <ClInclude Include="Src\Application\Scene\SettingScene\SettingScene.h" />
     <ClInclude Include="Src\Application\Scene\TitleScene\TitleScene.h" />
-    <ClInclude Include="Src\Application\Sound\SoundManager.h" />
+    <ClInclude Include="Src\Application\UI\UIAppearFade\UIAppearFade.h" />
+    <ClInclude Include="Src\Application\UI\UIBase\UIBase.h" />
+    <ClInclude Include="Src\Application\UI\UIFade\UIFade.h" />
     <ClInclude Include="Src\Framework\Direct3D\KdMaterial.h" />
     <ClInclude Include="Src\Framework\Direct3D\Polygon\KdPolygon.h" />
     <ClInclude Include="Src\Framework\Direct3D\Polygon\KdSquarePolygon.h" />
@@ -329,12 +337,20 @@
     <ClCompile Include="..\Library\imgui\imgui_tables.cpp" />
     <ClCompile Include="..\Library\imgui\imgui_widgets.cpp" />
     <ClCompile Include="Src\Application\Asset\AssetManager.cpp" />
+    <ClCompile Include="Src\Application\Camera\Camera.cpp" />
     <ClCompile Include="Src\Application\main.cpp" />
+    <ClCompile Include="Src\Application\Object\ObjectBase\ObjectBase.cpp" />
+    <ClCompile Include="Src\Application\Object\Tofu\Tofu.cpp" />
     <ClCompile Include="Src\Application\Scene\BaseScene\BaseScene.cpp" />
     <ClCompile Include="Src\Application\Scene\GameScene\GameScene.cpp" />
+    <ClCompile Include="Src\Application\Scene\PauseScene\PauseScene.cpp" />
+    <ClCompile Include="Src\Application\Scene\ResultScene\ResultScene.cpp" />
     <ClCompile Include="Src\Application\Scene\SceneManager.cpp" />
+    <ClCompile Include="Src\Application\Scene\SettingScene\SettingScene.cpp" />
     <ClCompile Include="Src\Application\Scene\TitleScene\TitleScene.cpp" />
-    <ClCompile Include="Src\Application\Sound\SoundManager.cpp" />
+    <ClCompile Include="Src\Application\UI\UIAppearFade\UIAppearFade.cpp" />
+    <ClCompile Include="Src\Application\UI\UIBase\UIBase.cpp" />
+    <ClCompile Include="Src\Application\UI\UIFade\UIFade.cpp" />
     <ClCompile Include="Src\Framework\Direct3D\KdMaterial.cpp">
       <SubType>
       </SubType>

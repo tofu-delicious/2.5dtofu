@@ -2,7 +2,7 @@
 
 #include"../BaseScene/BaseScene.h"
 
-class TitleScene : public BaseScene
+class TitleScene : public C_BaseScene
 {
 public :
 
