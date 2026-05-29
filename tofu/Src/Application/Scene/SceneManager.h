@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-class BaseScene;
+class C_BaseScene;
 
 class SceneManager
 {
@@ -48,7 +48,7 @@ private :
 	void ChangeScene(SceneType _sceneType);
 
 	// 現在のシーンのインスタンスを保持しているポインタ
-	std::shared_ptr<BaseScene> m_currentScene = nullptr;
+	std::shared_ptr<C_BaseScene> m_currentScene = nullptr;
 
 	// 現在のシーンの種類を保持している変数
 	SceneType m_currentSceneType = SceneType::Game;

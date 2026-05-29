@@ -14,6 +14,26 @@ public:
 	void PostUpdate()	override;
 	void DrawLit()		override;
 
+	//とうふの操作処理（ジャンプ）
+	void MoveTofu();
+
+	//座標確定処理
+	void CommitPos();
+
+	//行列処理
+	void UpdateMatrix();
+
 private:
 
+	//=============== 定数 =================
+	static constexpr float JUMP_POW = 0.15f;
+	static constexpr float GRAVITY_INCREMENT = 0.001f;
+
+	//============ 状態フラグ ==============
+	bool m_isSpaceKey = false;
+	bool m_isJumping = false;
+
+	//============= 動的変数 ===============
+	float m_moveSpeed = 0.0f;	//スピード
+	float m_gravity = 0.0f;		//重力（ジャンプ処理）
 };

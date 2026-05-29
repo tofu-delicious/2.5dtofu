@@ -16,22 +16,14 @@ void GameScene::Event()
 			SceneManager::SceneType::Title
 		);
 	}*/
+
+	m_camera->Update();
 }
 
 void GameScene::Init()
 {
-	//カメラ
-	m_camera = std::make_unique<KdCamera>();
-	//拡縮行列（S）
-	Math::Matrix _mScale = Math::Matrix::CreateScale(1.0f);
-	//回転行列（R）0～360度はディグリー角、変換後はラジアン角
-	Math::Matrix _mRotation = Math::Matrix::CreateRotationX(DirectX::XMConvertToRadians(0.0f));
-	//位置行列（T）　指定方法➀：Vector3型で渡す　指定方法➁：X・Y・Zの値を渡す
-	Math::Matrix _mTrans = Math::Matrix::CreateTranslation(0.0f, 0.0f, -5.0f);
-	//合成行列（SRT）== ワールド行列
-	Math::Matrix _mWorld = _mScale * _mRotation * _mTrans;
-
-	m_camera->SetCameraMatrix(_mWorld);
+	m_camera = std::make_unique<C_Camera>();
+	m_camera->Init();
 
 	//とうふ
 	m_tofu = std::make_unique<C_Tofu>();

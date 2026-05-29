@@ -13,8 +13,6 @@ public:
 	virtual void PostUpdate()	override;
 	virtual void DrawLit()		override;
 
-private:
-
 protected:
 
 	//============== インスタンス ===============
@@ -24,6 +22,7 @@ protected:
 	//================ 動的配列 =================
 	Math::Vector3 m_pos = {};			//座標
 	Math::Vector3 m_move = {};			//移動量
+	Math::Color m_color = { 1,1,1,1 };	//色
 	float m_radiusX = 0.0f;				//X軸方向の半径
 	float m_radiusY = 0.0f;;			//Y軸方向の半径
 	float m_scaleX = 1.0f;				//X軸方向の拡縮

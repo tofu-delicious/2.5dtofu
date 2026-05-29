@@ -7,8 +7,8 @@ class C_BaseScene
 {
 public :
 
-	C_BaseScene(){ Init(); }
-	virtual ~C_BaseScene() {}
+	C_BaseScene();
+	virtual ~C_BaseScene();
 
 	void PreUpdate();
 	void Update();
@@ -37,7 +37,7 @@ protected :
 	virtual void Event();
 	virtual void Init();
 
-	std::unique_ptr<KdCamera> m_camera = nullptr;
+	std::unique_ptr<C_Camera> m_camera = nullptr;
 
 	// 全オブジェクトのアドレスをリストで管理
 	std::list<std::shared_ptr<KdGameObject>> m_objList;

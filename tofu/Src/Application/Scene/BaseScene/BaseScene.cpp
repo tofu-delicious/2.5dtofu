@@ -1,6 +1,11 @@
 ﻿#include "BaseScene.h"
+#include "../../Camera/Camera.h"
 
-void BaseScene::PreUpdate()
+C_BaseScene::C_BaseScene() { Init(); }
+
+C_BaseScene::~C_BaseScene(){}
+
+void C_BaseScene::PreUpdate()
 {
 	// Updateの前の更新処理
 	// オブジェクトリストの整理 ・・・ 無効なオブジェクトを削除
@@ -27,7 +32,7 @@ void BaseScene::PreUpdate()
 	}
 }
 
-void BaseScene::Update()
+void C_BaseScene::Update()
 {
 	// シーン毎のイベント処理
 	Event();
@@ -39,7 +44,7 @@ void BaseScene::Update()
 	}
 }
 
-void BaseScene::PostUpdate()
+void C_BaseScene::PostUpdate()
 {
 	for (auto& obj : m_objList)
 	{
@@ -47,12 +52,12 @@ void BaseScene::PostUpdate()
 	}
 }
 
-void BaseScene::PreDraw()
+void C_BaseScene::PreDraw()
 {
 	// カメラ情報がある場合はシェーダーにセット
 	if (m_camera)
 	{
-		m_camera->SetToShader();
+		m_camera->SetShader();
 	}
 
 	for (auto& obj : m_objList)
@@ -61,7 +66,7 @@ void BaseScene::PreDraw()
 	}
 }
 
-void BaseScene::Draw()
+void C_BaseScene::Draw()
 {
 	// ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== =====
 	// 光を遮るオブジェクト(影を生み出す要因となるオブジェクト)をBeginとEndの間にまとめてDrawする
@@ -119,7 +124,7 @@ void BaseScene::Draw()
 	KdShaderManager::Instance().m_postProcessShader.EndBright();
 }
 
-void BaseScene::DrawSprite()
+void C_BaseScene::DrawSprite()
 {
 	// ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== =====
 	// 2Dの描画はこの間で行う
@@ -133,7 +138,7 @@ void BaseScene::DrawSprite()
 	KdShaderManager::Instance().m_spriteShader.End();
 }
 
-void BaseScene::DrawDebug()
+void C_BaseScene::DrawDebug()
 {
 	// ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== =====
 	// デバッグ情報の描画はこの間で行う
@@ -147,12 +152,12 @@ void BaseScene::DrawDebug()
 	KdShaderManager::Instance().m_StandardShader.EndUnLit();
 }
 
-void BaseScene::Event()
+void C_BaseScene::Event()
 {
 	// 各シーンで必要な内容を実装(オーバーライド)する
 }
 
-void BaseScene::Init()
+void C_BaseScene::Init()
 {
 	// 各シーンで必要な内容を実装(オーバーライド)する
 }
