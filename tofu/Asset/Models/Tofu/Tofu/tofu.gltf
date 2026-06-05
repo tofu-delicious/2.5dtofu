@@ -15,23 +15,23 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"\u7acb\u65b9\u4f53",
+			"name":"Cube",
 			"scale":[
-				0.6580958366394043,
-				0.4671424627304077,
-				0.6580958366394043
+				0.349651038646698,
+				0.20595183968544006,
+				0.349651038646698
 			]
 		}
 	],
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"\u30de\u30c6\u30ea\u30a2\u30eb",
+			"name":"Material",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
-					0.7975789904594421,
-					0.8000229597091675,
-					0.6534203886985779,
+					0.8000074625015259,
+					0.700802206993103,
+					0.5402100086212158,
 					1
 				],
 				"metallicFactor":0,
@@ -41,7 +41,7 @@
 	],
 	"meshes":[
 		{
-			"name":"\u7acb\u65b9\u4f53",
+			"name":"Cube",
 			"primitives":[
 				{
 					"attributes":{
@@ -59,7 +59,7 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":245,
+			"count":160,
 			"max":[
 				1,
 				1,
@@ -75,51 +75,51 @@
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":245,
+			"count":160,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":245,
+			"count":160,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
-			"count":1284,
+			"count":780,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":2940,
+			"byteLength":1920,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":2940,
-			"byteOffset":2940,
+			"byteLength":1920,
+			"byteOffset":1920,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1960,
-			"byteOffset":5880,
+			"byteLength":1280,
+			"byteOffset":3840,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":2568,
-			"byteOffset":7840,
+			"byteLength":1560,
+			"byteOffset":5120,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":10408,
+			"byteLength":6680,
 			"uri":"tofu.bin"
 		}
 	]

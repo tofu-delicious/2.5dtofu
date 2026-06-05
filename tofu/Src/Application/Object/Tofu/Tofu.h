@@ -6,7 +6,7 @@ class C_Tofu:public C_ObjectBase
 {
 public:
 	C_Tofu(){}
-	~C_Tofu(){}
+	~C_Tofu()override{}
 
 	void Init()			override;
 	void PreUpdate()	override;

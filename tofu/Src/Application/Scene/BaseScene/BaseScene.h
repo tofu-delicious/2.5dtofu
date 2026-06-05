@@ -19,6 +19,8 @@ public :
 	void DrawSprite();
 	void DrawDebug();
 
+	void ImGui();
+
 	// オブジェクトリストを取得
 	const std::list<std::shared_ptr<KdGameObject>>& GetObjList()
 	{

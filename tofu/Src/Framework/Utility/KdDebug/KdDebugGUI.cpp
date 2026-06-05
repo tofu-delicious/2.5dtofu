@@ -2,6 +2,9 @@
 
 #include "KdDebugGUI.h"
 
+#include "../../../Application/Scene/SceneManager.h"
+#include "../../../Application/Camera/Camera.h"
+
 KdDebugGUI::KdDebugGUI()
 {}
 KdDebugGUI::~KdDebugGUI()
@@ -49,6 +52,7 @@ void KdDebugGUI::GuiProcess()
 	//===========================================================
 	// 以下にImGui描画処理を記述
 	//===========================================================
+	SceneManager::Instance().ImGui();
 
 	// デバッグウィンドウ(日本語を表示したい場合はこう書く)
 //	if (ImGui::Begin(U8("えふぴぃえす")))

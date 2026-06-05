@@ -112,6 +112,24 @@
     <Filter Include="Src\Application\Camera">
       <UniqueIdentifier>{fb01c519-8b68-4ffa-b7cf-46f0a51c26fd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\Object\Gimmick">
+      <UniqueIdentifier>{23638741-5962-4173-812d-bf884a04dec4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Gimmick\GimmickBase">
+      <UniqueIdentifier>{92278f45-8453-414a-af2d-efbb7554fca1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Gimmick\Water">
+      <UniqueIdentifier>{e11de046-22f0-46ab-be3b-26acac7fc38f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Gimmick\Oil">
+      <UniqueIdentifier>{98f2bd27-d38a-4676-aa37-4bc42cb3a73e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Gimmick\Obstacle">
+      <UniqueIdentifier>{682585bb-1b73-4b7e-9353-c736e533aa3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Kitchen">
+      <UniqueIdentifier>{4296c6c0-e48f-4858-801b-42d8af09c5a4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -318,6 +336,21 @@
     <ClInclude Include="Src\Application\Camera\Camera.h">
       <Filter>Src\Application\Camera</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Application\Object\Gimmick\GimmickBase\GimmickBase.h">
+      <Filter>Src\Application\Object\Gimmick\GimmickBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Gimmick\Water\Water.h">
+      <Filter>Src\Application\Object\Gimmick\Water</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Gimmick\Oil\Oil.h">
+      <Filter>Src\Application\Object\Gimmick\Oil</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Gimmick\Obstacle\Obstacle.h">
+      <Filter>Src\Application\Object\Gimmick\Obstacle</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Kitchen\Kitchen.h">
+      <Filter>Src\Application\Object\Kitchen</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pch.cpp">
@@ -493,6 +526,21 @@
     </ClCompile>
     <ClCompile Include="Src\Application\Camera\Camera.cpp">
       <Filter>Src\Application\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Gimmick\GimmickBase\GimmickBase.cpp">
+      <Filter>Src\Application\Object\Gimmick\GimmickBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Gimmick\Water\Water.cpp">
+      <Filter>Src\Application\Object\Gimmick\Water</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Gimmick\Oil\Oil.cpp">
+      <Filter>Src\Application\Object\Gimmick\Oil</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Gimmick\Obstacle\Obstacle.cpp">
+      <Filter>Src\Application\Object\Gimmick\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Kitchen\Kitchen.cpp">
+      <Filter>Src\Application\Object\Kitchen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

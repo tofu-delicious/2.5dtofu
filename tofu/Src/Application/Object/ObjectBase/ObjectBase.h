@@ -7,11 +7,11 @@ public:
 	C_ObjectBase(){}
 	virtual ~C_ObjectBase(){}
 
-	virtual void Init()			override;
-	virtual void PreUpdate()	override;
-	virtual void Update()		override;
-	virtual void PostUpdate()	override;
-	virtual void DrawLit()		override;
+	void Init()			override{}
+	void PreUpdate()	override{}
+	void Update()		override{}
+	void PostUpdate()	override{}
+	void DrawLit()		override{}
 
 protected:
 
@@ -25,8 +25,10 @@ protected:
 	Math::Color m_color = { 1,1,1,1 };	//色
 	float m_radiusX = 0.0f;				//X軸方向の半径
 	float m_radiusY = 0.0f;;			//Y軸方向の半径
+	float m_scale = 1.0f;				//X・Y・Z軸共通の拡縮
 	float m_scaleX = 1.0f;				//X軸方向の拡縮
 	float m_scaleY = 1.0f;				//Y軸方向の拡縮
+	float m_scaleZ = 1.0f;				//Z軸方向の拡縮
 	float m_rotate = 0.0f;				//回転角度
 	float m_alpha = 0.0f;				//不透明度
 	float m_fadeStep = 0.0f;			//フェード用
