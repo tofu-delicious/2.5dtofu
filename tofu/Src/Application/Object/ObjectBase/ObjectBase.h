@@ -13,6 +13,8 @@ public:
 	void PostUpdate()	override{}
 	void DrawLit()		override{}
 
+	Math::Vector3 GetPos()const override { return m_pos; }
+
 protected:
 
 	//============== インスタンス ===============

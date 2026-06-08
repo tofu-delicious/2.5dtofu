@@ -23,6 +23,21 @@ public:
 	//行列処理
 	void UpdateMatrix();
 
+	//レイ判定
+	void CheckRay();
+
+	//球判定
+	void CheckSphere();
+
+	//衝突判定後の処理
+	void OnHit()override{}
+
+	//デバッグ処理
+	void ImGui()override;
+
+	//============= ゲッター ===============
+	
+
 private:
 
 	//=============== 定数 =================

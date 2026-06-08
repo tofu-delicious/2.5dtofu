@@ -1,6 +1,9 @@
 ﻿//Camera.h
 #pragma once
 
+//前方宣言
+class C_Tofu;
+
 class C_Camera
 {
 public:
@@ -17,6 +20,7 @@ public:
 private:
 
 	std::unique_ptr<KdCamera> m_spCamera = nullptr;
+	std::weak_ptr<C_Tofu> m_tofu;
 
 	//============= 状態フラグ ===============
 	bool m_isDebugOpen = false;

@@ -17,6 +17,9 @@ public:
 	//行列処理
 	void UpdateMatrix();
 
+	//当たり判定（キッチンが地面の役割と同義）
+	void InitCollision();
+
 	//デバッグ処理
 	void ImGui()	override;
 
