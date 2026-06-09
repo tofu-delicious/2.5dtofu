@@ -17,6 +17,9 @@ public:
 
 	void ImGui();
 
+	//============ セッター ===========
+	void SetTofu(std::shared_ptr<C_Tofu>& a_tofu) { m_tofu = a_tofu; }
+
 private:
 
 	std::unique_ptr<KdCamera> m_spCamera = nullptr;

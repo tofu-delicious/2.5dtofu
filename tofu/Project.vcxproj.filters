@@ -130,6 +130,12 @@
     <Filter Include="Src\Application\Object\Kitchen">
       <UniqueIdentifier>{4296c6c0-e48f-4858-801b-42d8af09c5a4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\Object\Kitchen\Kitchen">
+      <UniqueIdentifier>{64f5d105-7be8-4610-94eb-b3d6f8e24c08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Kitchen\Factory">
+      <UniqueIdentifier>{7a64eac7-607f-465b-8c58-a3a633fe0c48}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -348,8 +354,11 @@
     <ClInclude Include="Src\Application\Object\Gimmick\Obstacle\Obstacle.h">
       <Filter>Src\Application\Object\Gimmick\Obstacle</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Application\Object\Kitchen\Kitchen.h">
-      <Filter>Src\Application\Object\Kitchen</Filter>
+    <ClInclude Include="Src\Application\Object\Kitchen\Kitchen\Kitchen.h">
+      <Filter>Src\Application\Object\Kitchen\Kitchen</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Kitchen\Factory\KitchenFactory.h">
+      <Filter>Src\Application\Object\Kitchen\Factory</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -539,8 +548,11 @@
     <ClCompile Include="Src\Application\Object\Gimmick\Obstacle\Obstacle.cpp">
       <Filter>Src\Application\Object\Gimmick\Obstacle</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Application\Object\Kitchen\Kitchen.cpp">
-      <Filter>Src\Application\Object\Kitchen</Filter>
+    <ClCompile Include="Src\Application\Object\Kitchen\Kitchen\Kitchen.cpp">
+      <Filter>Src\Application\Object\Kitchen\Kitchen</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Kitchen\Factory\KitchenFactory.cpp">
+      <Filter>Src\Application\Object\Kitchen\Factory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

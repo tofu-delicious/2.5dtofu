@@ -2,7 +2,7 @@
 #include"../SceneManager.h"
 #include "../../Camera/Camera.h"
 #include "../../Object/Tofu/Tofu.h"
-#include "../../Object/Kitchen/Kitchen.h"
+#include "../../Object/Kitchen/Kitchen/Kitchen.h"
 
 GameScene::GameScene() { Init(); }
 
@@ -23,9 +23,6 @@ void GameScene::Event()
 
 void GameScene::Init()
 {
-	m_camera = std::make_unique<C_Camera>();
-	m_camera->Init();
-
 	//とうふ
 	m_tofu = std::make_unique<C_Tofu>();
 	m_tofu->Init();
@@ -35,4 +32,8 @@ void GameScene::Init()
 	m_kitchen = std::make_unique<C_Kitchen>();
 	m_kitchen->Init();
 	m_objList.push_back(m_kitchen);
+
+	m_camera = std::make_unique<C_Camera>();
+	m_camera->Init();
+	m_camera->SetTofu(m_tofu);
 }

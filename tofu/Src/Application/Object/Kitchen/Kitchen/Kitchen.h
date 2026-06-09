@@ -1,6 +1,6 @@
 ﻿//Kitchen.h
 #pragma once
-#include "../ObjectBase/ObjectBase.h"
+#include "../../ObjectBase/ObjectBase.h"
 
 class C_Kitchen:public C_ObjectBase
 {

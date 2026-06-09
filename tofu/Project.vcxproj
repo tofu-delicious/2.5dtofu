@@ -280,7 +280,8 @@
     <ClInclude Include="Src\Application\Object\Gimmick\Obstacle\Obstacle.h" />
     <ClInclude Include="Src\Application\Object\Gimmick\Oil\Oil.h" />
     <ClInclude Include="Src\Application\Object\Gimmick\Water\Water.h" />
-    <ClInclude Include="Src\Application\Object\Kitchen\Kitchen.h" />
+    <ClInclude Include="Src\Application\Object\Kitchen\Factory\KitchenFactory.h" />
+    <ClInclude Include="Src\Application\Object\Kitchen\Kitchen\Kitchen.h" />
     <ClInclude Include="Src\Application\Object\ObjectBase\ObjectBase.h" />
     <ClInclude Include="Src\Application\Object\Tofu\Tofu.h" />
     <ClInclude Include="Src\Application\Scene\BaseScene\BaseScene.h" />
@@ -348,7 +349,8 @@
     <ClCompile Include="Src\Application\Object\Gimmick\Obstacle\Obstacle.cpp" />
     <ClCompile Include="Src\Application\Object\Gimmick\Oil\Oil.cpp" />
     <ClCompile Include="Src\Application\Object\Gimmick\Water\Water.cpp" />
-    <ClCompile Include="Src\Application\Object\Kitchen\Kitchen.cpp" />
+    <ClCompile Include="Src\Application\Object\Kitchen\Factory\KitchenFactory.cpp" />
+    <ClCompile Include="Src\Application\Object\Kitchen\Kitchen\Kitchen.cpp" />
     <ClCompile Include="Src\Application\Object\ObjectBase\ObjectBase.cpp" />
     <ClCompile Include="Src\Application\Object\Tofu\Tofu.cpp" />
     <ClCompile Include="Src\Application\Scene\BaseScene\BaseScene.cpp" />

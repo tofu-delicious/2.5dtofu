@@ -1,6 +1,6 @@
 ﻿//Kitchen.cpp
 #include "Kitchen.h"
-#include "../../Asset/AssetManager.h"
+#include "../../../Asset/AssetManager.h"
 
 void C_Kitchen::Init()
 {
@@ -63,7 +63,7 @@ void C_Kitchen::ImGui()
 			ImGui::DragFloat("rotate", &m_rotate, -0.01f,0.0f, 360.0f);
 			ImGui::DragFloat("scale", &m_scale, -0.01f,0.01f, 10.0f);
 
-			ImGui::Text("pos : % .2f, % .2f, % .2f, m_pos.x", m_pos.y, m_pos.z);
+			ImGui::Text("pos : % .2f, % .2f, % .2f", m_pos.x, m_pos.y, m_pos.z);
 			ImGui::Text("rotate : % .2f", m_rotate);
 			ImGui::Text("scale : %.2f", m_scale);
 		}

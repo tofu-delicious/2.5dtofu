@@ -49,6 +49,7 @@ void C_Tofu::PostUpdate()
 
 void C_Tofu::DrawLit()
 {
+
 	KdShaderManager::Instance().m_StandardShader.DrawModel(*m_model, m_mWorld);
 }
 

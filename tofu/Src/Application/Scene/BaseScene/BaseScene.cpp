@@ -34,14 +34,13 @@ void C_BaseScene::PreUpdate()
 
 void C_BaseScene::Update()
 {
-	// シーン毎のイベント処理
-	Event();
-
 	// KdGameObjectを継承した全てのオブジェクトの更新 (ポリモーフィズム)
 	for (auto& obj : m_objList)
 	{
 		obj->Update();
 	}
+	// シーン毎のイベント処理
+	Event();
 }
 
 void C_BaseScene::PostUpdate()
