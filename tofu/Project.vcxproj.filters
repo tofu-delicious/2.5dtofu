@@ -136,6 +136,9 @@
     <Filter Include="Src\Application\Object\Kitchen\Factory">
       <UniqueIdentifier>{7a64eac7-607f-465b-8c58-a3a633fe0c48}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\ImGui">
+      <UniqueIdentifier>{29c0a67b-b45b-491e-8b67-a33bdc8712f7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -360,6 +363,12 @@
     <ClInclude Include="Src\Application\Object\Kitchen\Factory\KitchenFactory.h">
       <Filter>Src\Application\Object\Kitchen\Factory</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Application\Object\Kitchen\KitchenManager.h">
+      <Filter>Src\Application\Object\Kitchen</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\ImGui\ImGuiManager.h">
+      <Filter>Src\Application\ImGui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pch.cpp">
@@ -553,6 +562,12 @@
     </ClCompile>
     <ClCompile Include="Src\Application\Object\Kitchen\Factory\KitchenFactory.cpp">
       <Filter>Src\Application\Object\Kitchen\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Kitchen\KitchenManager.cpp">
+      <Filter>Src\Application\Object\Kitchen</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\ImGui\ImGuiManager.cpp">
+      <Filter>Src\Application\ImGui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

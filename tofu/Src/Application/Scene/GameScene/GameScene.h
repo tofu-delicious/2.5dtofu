@@ -4,7 +4,7 @@
 
 //前方宣言
 class C_Tofu;
-class C_Kitchen;
+class C_KitchenManager;
 
 class GameScene : public C_BaseScene
 {
@@ -13,7 +13,11 @@ public :
 	GameScene();
 	~GameScene();
 
-	
+	//「m_kitchens」の内容を「m_objList」へ格納
+	void SyncKitchensObjList();
+
+	//ImGuiManagerへインスタンス情報を送る関数
+	void SetUpImGuiManager();
 
 private:
 
@@ -21,5 +25,5 @@ private:
 	void Init()  override;
 
 	std::shared_ptr<C_Tofu> m_tofu = nullptr;
-	std::shared_ptr<C_Kitchen> m_kitchen = nullptr;
+	std::shared_ptr<C_KitchenManager> m_kitchenMgr = nullptr;
 };

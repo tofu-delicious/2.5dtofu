@@ -2,8 +2,7 @@
 
 #include "KdDebugGUI.h"
 
-#include "../../../Application/Scene/SceneManager.h"
-#include "../../../Application/Camera/Camera.h"
+#include "../../../Application/ImGui/ImGuiManager.h"
 
 KdDebugGUI::KdDebugGUI()
 {}
@@ -52,15 +51,15 @@ void KdDebugGUI::GuiProcess()
 	//===========================================================
 	// 以下にImGui描画処理を記述
 	//===========================================================
-	SceneManager::Instance().ImGui();
+	C_ImGuiManager::Instance().ImGui();
 
 	// デバッグウィンドウ(日本語を表示したい場合はこう書く)
-//	if (ImGui::Begin(U8("えふぴぃえす")))
-//	{
-		// FPS
-//		ImGui::Text("FPS : %d", Application::Instance().GetNowFPS());
-//	}
-//	ImGui::End();
+	//if (ImGui::Begin(U8("えふぴぃえす")))
+	//{
+	//	 FPS
+	//	ImGui::Text("FPS : %d", Application::Instance().GetNowFPS());
+	//}
+	//ImGui::End();
 
 	// ログウィンドウ
 	m_uqLog->Draw("Log Window");

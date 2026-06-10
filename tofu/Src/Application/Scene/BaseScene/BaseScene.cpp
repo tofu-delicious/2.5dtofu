@@ -151,20 +151,6 @@ void C_BaseScene::DrawDebug()
 	KdShaderManager::Instance().m_StandardShader.EndUnLit();
 }
 
-void C_BaseScene::ImGui()
-{
-	// ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== =====
-	// デバッグ表示はこの間で行う
-#ifdef _DEBUG
-
-	for (auto& obj : m_objList)
-	{
-		obj->ImGui();
-	}
-
-#endif
-}
-
 void C_BaseScene::Event()
 {
 	// 各シーンで必要な内容を実装(オーバーライド)する

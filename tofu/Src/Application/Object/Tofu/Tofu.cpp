@@ -198,9 +198,10 @@ void C_Tofu::CheckSphere()
 
 void C_Tofu::ImGui()
 {
-	if (ImGui::Begin("Log Window"))  // ★ウィンドウを開く
+	if (ImGui::Button("Tofu")) m_isDebugOpen = !m_isDebugOpen;
+
+	if(m_isDebugOpen)
 	{
 		ImGui::Text("m_pos.y : %.2f", m_pos.y);
 	}
-	ImGui::End();  // ★必ずBeginとペアで呼ぶ
 }

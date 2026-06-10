@@ -45,8 +45,9 @@ private:
 	static constexpr float GRAVITY_INCREMENT = 0.001f;
 
 	//============ 状態フラグ ==============
-	bool m_isSpaceKey = false;
-	bool m_isJumping = false;
+	bool m_isSpaceKey = false;		//キー制御
+	bool m_isJumping = false;		//true：ジャンプした　false：ジャンプしていない
+	bool m_isDebugOpen = false;		//true：デバッグウィンドウが開いている　false：開いていない
 
 	//============= 動的変数 ===============
 	float m_moveSpeed = 0.0f;	//スピード

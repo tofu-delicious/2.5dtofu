@@ -5,7 +5,16 @@
 class C_Kitchen:public C_ObjectBase
 {
 public:
+
+	//キッチンの種類
+	enum class KitchenType
+	{
+		withAppliances,		//コンロ・シンクあり
+		withoutAppliances,	//コンロ・シンクなし
+	};
+
 	C_Kitchen(){}
+	C_Kitchen(KitchenType type):m_kitchenType(type){}
 	~C_Kitchen(){}
 
 	void Init()			override;
@@ -29,8 +38,7 @@ private:
 	static constexpr Math::Vector3 INITIAL_POS = { 0.0f,0.0f,0.0f };
 
 	//============== 状態フラグ ================
-	bool m_isDebugOpen = false;;
 
 	//=============== 動的変数　================
-
+	KitchenType m_kitchenType = KitchenType::withAppliances;	//キッチンの種類（デフォルトはコンロシンクあり）
 };

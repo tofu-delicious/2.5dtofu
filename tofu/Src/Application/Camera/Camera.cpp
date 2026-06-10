@@ -39,18 +39,14 @@ void C_Camera::SetShader()
 
 void C_Camera::ImGui()
 {
-	if (ImGui::Begin("Log Window"))  // ★ウィンドウを開く
+	if (ImGui::Button("Camera")) m_isDebugOpen = !m_isDebugOpen;
+
+	if (m_isDebugOpen)
 	{
-		if (ImGui::Button("Camera")) m_isDebugOpen = !m_isDebugOpen;
+		ImGui::SliderFloat("posX", &m_pos.x, -640.0f, 640.0f);
+		ImGui::SliderFloat("posY", &m_pos.y, -360.0f, 360.0f);
+		ImGui::SliderFloat("posZ", &m_pos.z, -100.0f, 100.0f);
 
-		if (m_isDebugOpen)
-		{
-			ImGui::SliderFloat("posX", &m_pos.x, -640.0f, 640.0f);
-			ImGui::SliderFloat("posY", &m_pos.y, -360.0f, 360.0f);
-			ImGui::SliderFloat("posZ", &m_pos.z, -100.0f, 100.0f);
-
-			ImGui::Text("pos : % .2f, % .2f, % .2f", m_pos.x, m_pos.y, m_pos.z);
-		}
+		ImGui::Text("pos : % .2f, % .2f, % .2f", m_pos.x, m_pos.y, m_pos.z);
 	}
-	ImGui::End();  // ★必ずBeginとペアで呼ぶ
 }

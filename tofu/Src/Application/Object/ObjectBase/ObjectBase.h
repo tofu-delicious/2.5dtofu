@@ -12,8 +12,14 @@ public:
 	void Update()		override{}
 	void PostUpdate()	override{}
 	void DrawLit()		override{}
+	void ImGui()		override{}
 
+	//================ ゲッター =================
 	Math::Vector3 GetPos()const override { return m_pos; }
+
+	//================ セッター =================
+	void SetPos(float a_posX = 0.0f, float a_posY = 0.0f, float a_posZ = 0.0f){ m_pos = Math::Vector3{ a_posX,a_posY,a_posZ }; }	//各軸ごとに値を指定したいとき
+	void SetPos(const Math::Vector3& a_pos) { m_pos = a_pos; }	//X・Y・Z軸一気に座標を指定させたいとき
 
 protected:
 
@@ -21,7 +27,10 @@ protected:
 	std::shared_ptr<KdSquarePolygon> m_polygon = nullptr;	//2Dポリゴン用：きちんと実体化して使うこと！
 	std::shared_ptr<KdModelData> m_model = nullptr;			//3Dモデル用：きちんと実体化して使うこと！
 
-	//================ 動的配列 =================
+	//=============== 状態フラグ ================
+	bool m_isDebugOpen = false;
+
+	//================ 動的変数 =================
 	Math::Vector3 m_pos = {};			//座標
 	Math::Vector3 m_move = {};			//移動量
 	Math::Color m_color = { 1,1,1,1 };	//色
