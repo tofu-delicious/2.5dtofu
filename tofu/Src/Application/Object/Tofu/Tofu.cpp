@@ -198,10 +198,15 @@ void C_Tofu::CheckSphere()
 
 void C_Tofu::ImGui()
 {
+	//Sameline()：次のウィジェットを横方向に位置付ける
+	ImGui::SameLine();
+
 	if (ImGui::Button("Tofu")) m_isDebugOpen = !m_isDebugOpen;
 
 	if(m_isDebugOpen)
 	{
+		ImGui::Text("m_pos.x : %.2f", m_pos.x);
 		ImGui::Text("m_pos.y : %.2f", m_pos.y);
+		ImGui::Text("m_pos.z : %.2f", m_pos.z);
 	}
 }

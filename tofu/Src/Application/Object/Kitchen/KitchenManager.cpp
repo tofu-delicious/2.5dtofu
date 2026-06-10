@@ -5,7 +5,7 @@ void C_KitchenManager::Init()
 {
 	//最初の1個を生成して配置
 	auto first = m_factory.GetNext();
-	first->SetPos();
+	first->SetPos(INITIAL_POS);
 	m_kitchens.push_back(first);
 }
 
@@ -26,25 +26,28 @@ void C_KitchenManager::Update()
 		});
 
 	//最後のキッチンが一定位置まで来たら次を生成
-	if (!m_kitchens.empty() && m_kitchens.back()->GetPos().x < SPAWN_THRESHOLD)
+	if (!m_kitchens.empty() && m_kitchens.back()->GetPos().x + KITCHEN_WIDTH < SPAWN_THRESHOLD)
 	{
 		auto next = m_factory.GetNext();
-		next->SetPos(SPAWN_POS_X);
+		next->SetPos(Math::Vector3{SPAWN_POS_X,INITIAL_POS.y,INITIAL_POS.z});
 		m_kitchens.push_back(next);
 	}
 }
 
 void C_KitchenManager::ImGui()
 {
+	//Sameline()：次のウィジェットを横方向に位置付ける
+	ImGui::SameLine();
+
 	if (ImGui::Button("KitchenManager")) m_isDebugOpen = !m_isDebugOpen;
 
 	if (m_isDebugOpen)
 	{
 		ImGui::Text("m_kitchens.size:%zu",m_kitchens.size());
 
-		ImGui::DragFloat("SCROLL_SPEED", &SCROLL_SPEED, -0.01f, -10.0f, 10.0f);
+		/*ImGui::DragFloat("SCROLL_SPEED", &SCROLL_SPEED, -0.01f, -10.0f, 10.0f);
 		ImGui::DragFloat("SPAWN_THRESHOLD", &SPAWN_THRESHOLD, -1.0f, -400.0f, 400.0f);
 		ImGui::DragFloat("DESTROY_THRESHOLD", &DESTROY_THRESHOLD, -1.0f, -400.0f, 400.0f);
-		ImGui::DragFloat("SPAWN_POS_X", &SPAWN_POS_X, -1.0f, -400.0f, 400.0f);
+		ImGui::DragFloat("SPAWN_POS_X", &SPAWN_POS_X, -1.0f, -400.0f, 400.0f);*/
 	}
 }

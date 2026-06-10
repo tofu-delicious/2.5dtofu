@@ -41,6 +41,7 @@ public:
 private:
 
 	//=============== 定数 =================
+	static constexpr Math::Vector3 INITIAL_POS = { 0.0f,0.0f,0.0f };
 	static constexpr float JUMP_POW = 0.15f;
 	static constexpr float GRAVITY_INCREMENT = 0.001f;
 

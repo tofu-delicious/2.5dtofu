@@ -44,7 +44,7 @@ void GameScene::Init()
 	m_objList.push_back(m_tofu);
 
 	//カメラ
-	m_camera = std::make_unique<C_Camera>();
+	m_camera = std::make_shared<C_Camera>();
 	m_camera->Init();
 	m_camera->SetTofu(m_tofu);
 

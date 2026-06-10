@@ -16,6 +16,8 @@ void C_Kitchen::Init()
 	//初期座標はZ座標を-4の位置にする
 	m_pos = INITIAL_POS;
 
+	UpdateMatrix();
+
 	//========= 衝突判定初期化 =========
 	m_pCollider = std::make_unique<KdCollider>();
 
@@ -46,13 +48,6 @@ void C_Kitchen::UpdateMatrix()
 	Math::Matrix rotateMat = Math::Matrix::CreateRotationX(m_rotate);
 	Math::Matrix transMat = Math::Matrix::CreateTranslation(m_pos);
 	m_mWorld = scaleMat * rotateMat * transMat;
-}
-
-void C_Kitchen::InitCollision()
-{
-	m_pCollider = std::make_unique<KdCollider>();
-	
-	m_pCollider->RegisterCollisionShape("KitchenCollision", m_model, KdCollider::Type::TypeGround);
 }
 
 void C_Kitchen::ImGui()
