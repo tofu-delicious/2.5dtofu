@@ -13,10 +13,6 @@ void C_Kitchen::Init()
 	{
 		m_model = ASSETMANAGER.GetModel("SimpleKitchen");	//コンロ・シンクなしモデル
 	}
-	//初期座標はZ座標を-4の位置にする
-	m_pos = INITIAL_POS;
-
-	UpdateMatrix();
 
 	//========= 衝突判定初期化 =========
 	m_pCollider = std::make_unique<KdCollider>();

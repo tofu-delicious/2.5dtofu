@@ -35,9 +35,6 @@ void GameScene::Init()
 	m_kitchenMgr = std::make_shared<C_KitchenManager>();
 	m_kitchenMgr->Init();
 
-	//キッチンを「m_objListへ登録
-	for (auto& kitchen : m_kitchenMgr->GetKitchens()) m_objList.push_back(kitchen);
-
 	//とうふ
 	m_tofu = std::make_unique<C_Tofu>();
 	m_tofu->Init();
@@ -47,6 +44,8 @@ void GameScene::Init()
 	m_camera = std::make_shared<C_Camera>();
 	m_camera->Init();
 	m_camera->SetTofu(m_tofu);
+
+	SyncKitchensObjList();
 
 	SetUpImGuiManager();
 }

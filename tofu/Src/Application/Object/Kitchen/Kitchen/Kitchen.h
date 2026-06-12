@@ -9,6 +9,7 @@ public:
 	//キッチンの種類
 	enum class KitchenType
 	{
+		None,				//初期化用
 		withAppliances,		//コンロ・シンクあり
 		withoutAppliances,	//コンロ・シンクなし
 	};
@@ -32,10 +33,9 @@ public:
 private:
 
 	//================= 定数 ===================
-	static constexpr Math::Vector3 INITIAL_POS = { 0.0f,0.0f,0.0f };
 
 	//============== 状態フラグ ================
 
 	//=============== 動的変数　================
-	KitchenType m_kitchenType = KitchenType::withAppliances;	//キッチンの種類（デフォルトはコンロシンクあり）
+	KitchenType m_kitchenType = KitchenType::None;	//キッチンの種類（デフォルトはコンロシンクあり）
 };

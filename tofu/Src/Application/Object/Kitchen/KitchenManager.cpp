@@ -6,7 +6,13 @@ void C_KitchenManager::Init()
 	//最初の1個を生成して配置
 	auto first = m_factory.GetNext();
 	first->SetPos(INITIAL_POS);
+	first->UpdateMatrix();
 	m_kitchens.push_back(first);
+
+	auto second = m_factory.GetNext();
+	second->SetPos(Math::Vector3{SPAWN_POS_X, INITIAL_POS.y, INITIAL_POS.z });
+	second->UpdateMatrix();
+	m_kitchens.push_back(second);
 }
 
 void C_KitchenManager::Update()
@@ -26,10 +32,11 @@ void C_KitchenManager::Update()
 		});
 
 	//最後のキッチンが一定位置まで来たら次を生成
-	if (!m_kitchens.empty() && m_kitchens.back()->GetPos().x + KITCHEN_WIDTH < SPAWN_THRESHOLD)
+	if (!m_kitchens.empty() && m_kitchens.back()->GetPos().x < SPAWN_THRESHOLD)
 	{
 		auto next = m_factory.GetNext();
 		next->SetPos(Math::Vector3{SPAWN_POS_X,INITIAL_POS.y,INITIAL_POS.z});
+		next->UpdateMatrix();
 		m_kitchens.push_back(next);
 	}
 }

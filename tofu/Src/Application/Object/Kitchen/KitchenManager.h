@@ -31,13 +31,15 @@ private:
 
 	//================ 定数 =================
 	static constexpr Math::Vector3 INITIAL_POS = Math::Vector3{ 0.0f,-0.2f,0.0f };	//キッチンの初期座標
-
-	static constexpr float SCROLL_SPEED = 0.01f;		//スクロール速度
-	static constexpr float SPAWN_THRESHOLD = 6.0f;		//次のキッチンを出すX座標のしきい値2
-	static constexpr float DESTROY_THRESHOLD = -3.0f;	//キッチンを消すX座標のしきい値
-	static constexpr float SPAWN_POS_X = 6.0f;			//キッチンを画面右端に出すX座標
-
 	static constexpr float KITCHEN_WIDTH = 2.4f;		//キッチンの横幅：2.41m
+
+	static constexpr float SCROLL_SPEED = 0.01f;								//スクロール速度
+	static constexpr float SPAWN_POS_X = 6.0f;									//キッチンを画面右端に出すX座標
+	static constexpr float SPAWN_THRESHOLD = SPAWN_POS_X - KITCHEN_WIDTH;		//次のキッチンを出すX座標のしきい値2
+	static constexpr float DESTROY_THRESHOLD = -3.0f;							//キッチンを消すX座標のしきい値
+	
+
+	
 
 	//============ 状態フラグ ===============
 	bool m_isDebugOpen = false;
