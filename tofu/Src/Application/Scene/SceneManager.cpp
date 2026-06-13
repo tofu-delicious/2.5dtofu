@@ -2,7 +2,10 @@
 
 #include "BaseScene/BaseScene.h"
 #include "TitleScene/TitleScene.h"
+#include "SettingScene/SettingScene.h"
 #include "GameScene/GameScene.h"
+#include "PauseScene/PauseScene.h"
+#include "ResultScene/ResultScene.h"
 
 void SceneManager::PreUpdate()
 {
@@ -12,37 +15,81 @@ void SceneManager::PreUpdate()
 		ChangeScene(m_nextSceneType);
 	}
 
-	m_currentScene->PreUpdate();
+	//Overlayがあれば優先的に更新
+	if (m_overlayScene)
+		m_overlayScene->PreUpdate();
+	else
+		m_currentScene->PreUpdate();
 }
 
 void SceneManager::Update()
 {
-	m_currentScene->Update();
+	if (m_overlayScene)
+		m_overlayScene->Update();
+	else
+		m_currentScene->Update();
 }
 
 void SceneManager::PostUpdate()
 {
-	m_currentScene->PostUpdate();
+	if (m_overlayScene)
+		m_overlayScene->PostUpdate();
+	else
+		m_currentScene->PostUpdate();
 }
 
 void SceneManager::PreDraw()
 {
 	m_currentScene->PreDraw();
+
+	//Overlayは重ねて表示するため、両方描画する
+	if (m_overlayScene)
+		m_overlayScene->PreDraw();
 }
 
 void SceneManager::Draw()
 {
 	m_currentScene->Draw();
+
+	if (m_overlayScene)
+		m_overlayScene->PreDraw();
 }
 
 void SceneManager::DrawSprite()
 {
 	m_currentScene->DrawSprite();
+
+	if (m_overlayScene)
+		m_overlayScene->DrawSprite();
 }
 
 void SceneManager::DrawDebug()
 {
 	m_currentScene->DrawDebug();
+}
+
+void SceneManager::PushOverlay(SceneType _nextOverlay)
+{
+	//シーン切替
+	switch (_nextOverlay)
+	{
+	case SceneType::Setting:
+		m_overlayScene = std::make_shared<C_SettingScene>();
+		break;
+	case SceneType::Pause:
+		m_overlayScene = std::make_shared<C_PauseScene>();
+		break;
+	case SceneType::Result:
+		m_overlayScene = std::make_shared<C_ResultScene>();
+		break;
+	}
+
+	m_overlaySceneType = _nextOverlay;
+}
+
+void SceneManager::PopOverlay()
+{
+	m_overlayScene = nullptr;
 }
 
 const std::list<std::shared_ptr<KdGameObject>>& SceneManager::GetObjList()

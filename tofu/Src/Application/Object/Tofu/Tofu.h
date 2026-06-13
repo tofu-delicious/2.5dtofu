@@ -40,10 +40,10 @@ public:
 private:
 
 	//=============== 定数 =================
-	static constexpr Math::Vector3 INITIAL_POS = { 0.0f,0.65f,0.0f };
+	static constexpr Math::Vector3 INITIAL_POS = { 0.0f,0.65f,-0.1f };
 	static constexpr float MIN_RAY_RANGE = 0.15f;						//RAYの最低保証
-	static constexpr float JUMP_POW = 0.07f;							//ジャンプ力
-	static constexpr float GRAVITY_INCREMENT = 0.001f;					//重力減算値
+	static constexpr float JUMP_POW = 0.06f;							//ジャンプ力
+	static constexpr float GRAVITY_INCREMENT = 0.00075f;					//重力減算値
 
 	//============ 状態フラグ ==============
 	bool m_isSpaceKey = false;		//キー制御

@@ -9,18 +9,27 @@ public :
 	// シーン情報
 	enum class SceneType
 	{
-		Title,
-		Game,
+		Title,		//タイトル画面
+		Setting,	//設定画面
+		Game,		//ゲーム画面
+		Pause,		//ポーズ画面
+		Result,		//リザルト画面
 	};
 
+	//============ 更新処理 =============
 	void PreUpdate();
 	void Update();
 	void PostUpdate();
 
+	//============ 描画処理 =============
 	void PreDraw();
 	void Draw();
 	void DrawSprite();
 	void DrawDebug();
+
+	//=========== シーン処理 ============
+	void PushOverlay(SceneType _nextOverlay);	//前面に描画するシーンを指定する
+	void PopOverlay();							//前面に描画中のシーンを削除する
 
 	// 次のシーンをセット (次のフレームから切り替わる)
 	void SetNextScene(SceneType _nextScene)
@@ -50,11 +59,17 @@ private :
 	// 現在のシーンのインスタンスを保持しているポインタ
 	std::shared_ptr<C_BaseScene> m_currentScene = nullptr;
 
+	// 前面に重ねるシーンのインスタンスを保持しているポインタ
+	std::shared_ptr<C_BaseScene> m_overlayScene = nullptr;
+
 	// 現在のシーンの種類を保持している変数
 	SceneType m_currentSceneType = SceneType::Game;
 	
 	// 次のシーンの種類を保持している変数
 	SceneType m_nextSceneType = m_currentSceneType;
+
+	// Overlayのシーン種類を保持する変数を追加
+	SceneType m_overlaySceneType = SceneType::Pause;
 
 private:
 
