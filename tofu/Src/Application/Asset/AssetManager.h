@@ -41,6 +41,10 @@ private:
 
 	std::unordered_map<std::string, std::shared_ptr<KdTexture>> m_texMap;			//2Dテクスチャ格納マップ
 
-};
+public:
 
-#define ASSETMANAGER C_AssetManager::GetInstance()
+	static C_AssetManager& Instance() {
+		static C_AssetManager Instance;
+		return Instance;
+	}
+};

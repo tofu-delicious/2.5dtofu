@@ -9,7 +9,7 @@ void C_Tofu::Init()
 	m_pDebugWire = std::make_unique<KdDebugWireFrame>();
 
 	//=========== モデルロード ===============
-	m_model = ASSETMANAGER.GetModel("Tofu");
+	m_model = C_AssetManager::Instance().GetModel("Tofu");
 
 	m_mWorld = Math::Matrix::Identity;
 

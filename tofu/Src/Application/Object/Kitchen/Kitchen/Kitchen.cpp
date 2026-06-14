@@ -7,11 +7,11 @@ void C_Kitchen::Init()
 	//============ 初期化 ==============
 	if (m_kitchenType == KitchenType::withAppliances)
 	{
-		m_model = ASSETMANAGER.GetModel("Kitchen");			//コンロ・シンクありモデル
+		m_model = C_AssetManager::Instance().GetModel("Kitchen");			//コンロ・シンクありモデル
 	}
 	else
 	{
-		m_model = ASSETMANAGER.GetModel("SimpleKitchen");	//コンロ・シンクなしモデル
+		m_model = C_AssetManager::Instance().GetModel("SimpleKitchen");	//コンロ・シンクなしモデル
 	}
 
 	//========= 衝突判定初期化 =========
