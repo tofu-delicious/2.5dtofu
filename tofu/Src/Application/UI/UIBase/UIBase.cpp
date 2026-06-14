@@ -1,15 +1,15 @@
 ﻿#include "UIBase.h"
 
 
-void C_UIBase::Init(const Math::Vector3& a_pos, const Math::Rectangle& a_rect, std::shared_ptr<KdTexture> a_tex, float a_scaleX, float a_scaleY,float a_rotate, float a_alpha)
+void C_UIBase::Init(const Math::Vector3& a_pos, const Math::Rectangle& a_rect, std::shared_ptr<KdTexture> a_tex, float a_alpha, float a_scaleX, float a_scaleY,float a_rotate)
 {
 	m_pos = a_pos;
 	m_rect = a_rect;
 	m_tex = a_tex;
+	m_alpha = a_alpha;
 	m_scaleX = a_scaleX;
 	m_scaleY = a_scaleY;
 	m_rotate = a_rotate;
-	m_alpha = a_alpha;
 }
 
 void C_UIBase::DrawSprite()

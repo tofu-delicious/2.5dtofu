@@ -3,6 +3,7 @@
 #include "../../Asset/AssetManager.h"
 #include "../../UI/UIBase/UIBase.h"
 #include "../../UI/UIFade/UIFade.h"
+#include "../../UI/UIAppearFade/UIAppearFade.h"
 #include "../../Camera/Camera.h"
 
 TitleScene::TitleScene() { Init(); }
@@ -36,14 +37,14 @@ void TitleScene::Init()
 	AddObject(m_tile);
 
 	//スタートボタン
-	m_start = std::make_shared<C_UIBase>();
+	m_start = std::make_shared<C_UIFade>();
 	std::shared_ptr<KdTexture> startTex = C_AssetManager::Instance().GetTex("TitleButton");
 	m_start->Init(START_POS, START_RECT,startTex);
 	m_start->SetCamera(m_spCamera->GetKdCamera());
 	AddObject(m_start);
 
 	//音量設定ボタン
-	m_sound = std::make_shared<C_UIBase>();
+	m_sound = std::make_shared<C_UIAppearFade>();
 	std::shared_ptr<KdTexture> soundTex = C_AssetManager::Instance().GetTex("TitleButton");
 	m_sound->Init(SOUND_POS, SOUND_RECT,soundTex);
 	m_sound->SetCamera(m_spCamera->GetKdCamera());

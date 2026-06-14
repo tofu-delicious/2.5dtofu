@@ -3,8 +3,9 @@
 #include"../BaseScene/BaseScene.h"
 
 //前方宣言
-class C_UIBase;		//普通に表示させたいとき
-class C_UIFade;		//常にフェードして表示させたいとき
+class C_UIBase;			//普通に表示させたいとき
+class C_UIFade;			//常にフェードして表示させたいとき
+class C_UIAppearFade;	//最初だけフェードさせたいとき
 
 class TitleScene : public C_BaseScene
 {
@@ -34,6 +35,6 @@ private :
 
 	//======== インスタンス ==========
 	std::shared_ptr<C_UIBase> m_tile = nullptr;		//タイル（背景）
-	std::shared_ptr<C_UIBase> m_start = nullptr;	//スタートボタン
-	std::shared_ptr<C_UIBase> m_sound = nullptr;	//音量設定ボタン
+	std::shared_ptr<C_UIFade> m_start = nullptr;	//スタートボタン
+	std::shared_ptr<C_UIAppearFade> m_sound = nullptr;	//音量設定ボタン
 };

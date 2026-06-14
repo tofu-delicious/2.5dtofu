@@ -11,10 +11,10 @@ public:
 		const Math::Vector3& a_pos,
 		const Math::Rectangle& a_rect,
 		std::shared_ptr<KdTexture> a_tex,
+		float a_alpha = 1.0f,
 		float a_scaleX = 1.0f,
 		float a_scaleY = 1.0f,
-		float a_rotate = 0.0f,
-		float a_alpha = 1.0f);
+		float a_rotate = 0.0f);
 
 	void DrawSprite()override;
 
