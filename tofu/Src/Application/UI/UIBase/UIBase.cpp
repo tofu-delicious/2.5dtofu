@@ -26,5 +26,5 @@ void C_UIBase::DrawSprite()
 	//不透明度指定
 	Math::Color color(1.0f, 1.0f, 1.0f, m_alpha);
 
-	KdShaderManager::Instance().m_spriteShader.DrawTex(m_tex, v2DPos.x, v2DPos.y, &m_rect, &color);
+	KdShaderManager::Instance().m_spriteShader.DrawTex(m_tex, v2DPos.x, v2DPos.y,m_rect.width,m_rect.height, &m_rect, &color);
 }
