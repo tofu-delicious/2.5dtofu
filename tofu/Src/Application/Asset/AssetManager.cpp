@@ -26,6 +26,7 @@ void C_AssetManager::ReadFile(const std::string& a_fileName)
 
 		if (asset == "Polygon") LoadPolygon(keyword, path);
 		else if (asset == "Model") LoadModel(keyword, path);
+		else if (asset == "Texture") LoadTex(keyword, path);
 	}
 }
 
@@ -49,6 +50,16 @@ void C_AssetManager::LoadModel(const std::string& a_keyword, const std::string& 
 	m_modelMap[a_keyword] = newModel;						//モデルマップに追加
 }
 
+void C_AssetManager::LoadTex(const std::string& a_keyword, const std::string& a_filePath)
+{
+	//ロード中のテクスチャが既にマップに存在していればリターン
+	if (m_texMap.count(a_keyword) > 0)return;
+
+	auto newTex = std::make_shared<KdTexture>();
+	newTex->Load(a_filePath);
+	m_texMap[a_keyword] = newTex;
+}
+
 std::shared_ptr<KdSquarePolygon> C_AssetManager::GetPolygon(const std::string& a_keyword)
 {
 	//引数の「keyword」をマップ上で探索する
@@ -67,6 +78,17 @@ std::shared_ptr<KdModelData> C_AssetManager::GetModel(const std::string& a_keywo
 	auto it = m_modelMap.find(a_keyword);
 	//もしイテレータがend関数と等しければデータなし、そうでなければデータ発見
 	if (it != m_modelMap.end())
+	{
+		return it->second;
+	}
+	return nullptr;
+}
+
+std::shared_ptr<KdTexture> C_AssetManager::GetTex(const std::string& a_keyword)
+{
+	auto it = m_texMap.find(a_keyword);
+
+	if (it != m_texMap.end())
 	{
 		return it->second;
 	}
