@@ -1,4 +1,5 @@
-Texture Tile Asset/Textures/tile.png
+Texture Tile Asset/Textures/AllScene/tile3.png
+Texture TitleButton Asset/Textures/TitleScene/titleButton.png
 Model Tofu Asset/Models/Tofu/Tofu/tofu.gltf
 Model Kitchen Asset/Models/Kitchen/Kitchen/kitchen.gltf
 Model SimpleKitchen Asset/Models/SimpleKitchen/SimpleKitchen/simple.gltf
