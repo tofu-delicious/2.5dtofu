@@ -2,6 +2,7 @@
 #include "../SceneManager.h"
 #include "../../Asset/AssetManager.h"
 #include "../../UI/UIBase/UIBase.h"
+#include "../../UI/UIFade/UIFade.h"
 #include "../../Camera/Camera.h"
 
 TitleScene::TitleScene() { Init(); }

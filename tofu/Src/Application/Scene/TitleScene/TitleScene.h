@@ -3,7 +3,8 @@
 #include"../BaseScene/BaseScene.h"
 
 //前方宣言
-class C_UIBase;
+class C_UIBase;		//普通に表示させたいとき
+class C_UIFade;		//常にフェードして表示させたいとき
 
 class TitleScene : public C_BaseScene
 {

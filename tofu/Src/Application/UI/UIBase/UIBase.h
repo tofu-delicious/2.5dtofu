@@ -20,7 +20,7 @@ public:
 
 	void SetCamera(std::shared_ptr<KdCamera> a_spCamera) { m_wpCamera = a_spCamera; }
 
-private:
+protected:
 
 	//============ インスタンス =============
 	std::weak_ptr<KdCamera> m_wpCamera;
