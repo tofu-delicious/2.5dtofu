@@ -6,13 +6,14 @@ C_Camera::C_Camera(){}
 
 C_Camera::~C_Camera(){}
 
-void C_Camera::Init()
+void C_Camera::Init(const Math::Vector3& a_pos, float a_rotate)
 {
-	m_spCamera = std::make_unique<KdCamera>();
+	m_spCamera = std::make_shared<KdCamera>();
 
 	m_spCamera->SetCameraMatrix(Math::Matrix::Identity);
 
-	m_pos = { 0.0f,1.0f,-1.0f };
+	m_pos = a_pos;
+	m_rotate = a_rotate;
 }
 
 void C_Camera::Update()
@@ -23,7 +24,7 @@ void C_Camera::Update()
 	//拡縮行列（S）
 	Math::Matrix _mScale = Math::Matrix::CreateScale(1.0f);
 	//回転行列（R）0～360度はディグリー角、変換後はラジアン角
-	Math::Matrix _mRotation = Math::Matrix::CreateRotationX(DirectX::XMConvertToRadians(10.0f));
+	Math::Matrix _mRotation = Math::Matrix::CreateRotationX(DirectX::XMConvertToRadians(m_rotate));
 	//位置行列（T）　指定方法➀：Vector3型で渡す　指定方法➁：X・Y・Zの値を渡す
 	Math::Matrix _mTrans = Math::Matrix::CreateTranslation(m_pos + Math::Vector3{tofuPos.x,0.0f,0.0f});
 	//合成行列（SRT）== ワールド行列

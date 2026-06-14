@@ -69,7 +69,11 @@ public:
 	bool Intersects(const KdCollider::RayInfo& targetShape, std::list<KdCollider::CollisionResult>* pResults);
 
 	//============= 自作関数 ==============
-	virtual void OnHit(){}		//衝突判定後の処理
+	//衝突判定後の処理
+	virtual void OnHit(){}
+
+	//ラジアン値を求める
+	float CalcRadian(float a_angle) { return DirectX::XMConvertToRadians(a_angle); }
 
 protected:
 

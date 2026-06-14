@@ -37,7 +37,7 @@ protected :
 	virtual void Event();
 	virtual void Init();
 
-	std::shared_ptr<C_Camera> m_camera = nullptr;
+	std::shared_ptr<C_Camera> m_spCamera = nullptr;
 
 	// 全オブジェクトのアドレスをリストで管理
 	std::list<std::shared_ptr<KdGameObject>> m_objList;

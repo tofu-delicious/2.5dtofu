@@ -20,7 +20,7 @@ void GameScene::Event()
 	}*/
 
 	//カメラ更新処理
-	m_camera->Update();
+	m_spCamera->Update();
 
 	//キッチン処理
 	m_kitchenMgr->Update();
@@ -36,14 +36,14 @@ void GameScene::Init()
 	m_kitchenMgr->Init();
 
 	//とうふ
-	m_tofu = std::make_unique<C_Tofu>();
+	m_tofu = std::make_shared<C_Tofu>();
 	m_tofu->Init();
 	m_objList.push_back(m_tofu);
 
 	//カメラ
-	m_camera = std::make_shared<C_Camera>();
-	m_camera->Init();
-	m_camera->SetTofu(m_tofu);
+	m_spCamera = std::make_shared<C_Camera>();
+	m_spCamera->Init(CAMERA_POS,CAMERA_ROTATE);
+	m_spCamera->SetTofu(m_tofu);
 
 	SyncKitchensObjList();
 
@@ -63,7 +63,7 @@ void GameScene::SyncKitchensObjList()
 
 void GameScene::SetUpImGuiManager()
 {
-	C_ImGuiManager::Instance().SetCamera(m_camera.get());
+	C_ImGuiManager::Instance().SetCamera(m_spCamera.get());
 	//C_ImGuiManager::Instance().SetKitchen(m_kitchen);
 	C_ImGuiManager::Instance().SetKitchenMgr(m_kitchenMgr);
 	C_ImGuiManager::Instance().SetTofu(m_tofu);

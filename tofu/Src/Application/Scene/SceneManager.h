@@ -63,7 +63,7 @@ private :
 	std::shared_ptr<C_BaseScene> m_overlayScene = nullptr;
 
 	// 現在のシーンの種類を保持している変数
-	SceneType m_currentSceneType = SceneType::Game;
+	SceneType m_currentSceneType = SceneType::Title;
 	
 	// 次のシーンの種類を保持している変数
 	SceneType m_nextSceneType = m_currentSceneType;

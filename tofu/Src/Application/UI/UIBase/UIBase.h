@@ -4,25 +4,33 @@
 class C_UIBase :public KdGameObject
 {
 public:
-	C_UIBase();
-	virtual ~C_UIBase();
+	C_UIBase(){}
+	~C_UIBase()override{}
 
-	void Init();
+	void Init(
+		const Math::Vector3& a_pos,
+		const Math::Rectangle& a_rect,
+		std::shared_ptr<KdTexture> a_tex,
+		float a_scaleX = 1.0f,
+		float a_scaleY = 1.0f,
+		float a_rotate = 0.0f,
+		float a_alpha = 1.0f);
+
+	void DrawSprite()override;
+
+	void SetCamera(std::shared_ptr<KdCamera> a_spCamera) { m_wpCamera = a_spCamera; }
 
 private:
 
-	Math::Vector2 m_pos;				//座標
+	//============ インスタンス =============
+	std::weak_ptr<KdCamera> m_wpCamera;
+
+	//============== 動的変数 ===============
+	Math::Vector3 m_pos;				//座標
 	Math::Rectangle m_rect;				//画像範囲指定
 	std::shared_ptr<KdTexture> m_tex;	//画像用
-	float m_radiusX;					//X軸方向の半径
-	float m_radiusY;					//Y軸方向の半径
 	float m_scaleX;						//X軸方向の拡縮
 	float m_scaleY;						//Y軸方向の拡縮
 	float m_rotate;						//回転角度
 	float m_alpha;						//不透明度
-	float m_fadeStep;					//フェード用
-	float m_maxFade;					//最大不透明度
-	bool m_isActive;					//状態フラグ
-
-	KdTexture
 };

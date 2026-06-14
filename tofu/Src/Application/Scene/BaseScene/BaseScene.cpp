@@ -54,9 +54,9 @@ void C_BaseScene::PostUpdate()
 void C_BaseScene::PreDraw()
 {
 	// カメラ情報がある場合はシェーダーにセット
-	if (m_camera)
+	if (m_spCamera)
 	{
-		m_camera->SetShader();
+		m_spCamera->SetShader();
 	}
 
 	for (auto& obj : m_objList)

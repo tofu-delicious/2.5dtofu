@@ -24,6 +24,11 @@ private:
 	void Event() override;
 	void Init()  override;
 
+	//=============== インスタンス =============
 	std::shared_ptr<C_Tofu> m_tofu = nullptr;
 	std::shared_ptr<C_KitchenManager> m_kitchenMgr = nullptr;
+
+	//================= 動的変数 ===============
+	static constexpr Math::Vector3 CAMERA_POS = { 0.0f,1.0f,-1.0f };
+	static constexpr float CAMERA_ROTATE = 10.0f;
 };
