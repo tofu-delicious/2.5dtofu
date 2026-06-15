@@ -13,8 +13,6 @@ public:
 	//フェード処理
 	bool Fade();
 
-	void SetCamera(std::shared_ptr<KdCamera> a_spCamera) { m_wpCamera = a_spCamera; }
-
 private:
 
 	//============ 定数 =============

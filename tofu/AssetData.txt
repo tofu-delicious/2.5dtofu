@@ -1,5 +1,7 @@
 Texture Tile Asset/Textures/AllScene/tile3.png
 Texture TitleButton Asset/Textures/TitleScene/titleButton.png
+Texture PauseButton Asset/Textures/PauseScene/pauseButton.png
+Texture PauseBack Asset/Textures/PauseScene/pauseBack.png
 Model Tofu Asset/Models/Tofu/Tofu/tofu.gltf
 Model Kitchen Asset/Models/Kitchen/Kitchen/kitchen.gltf
 Model SimpleKitchen Asset/Models/SimpleKitchen/SimpleKitchen/simple.gltf

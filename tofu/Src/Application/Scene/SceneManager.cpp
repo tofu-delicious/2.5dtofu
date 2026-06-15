@@ -52,7 +52,7 @@ void SceneManager::Draw()
 	m_currentScene->Draw();
 
 	if (m_overlayScene)
-		m_overlayScene->PreDraw();
+		m_overlayScene->Draw();
 }
 
 void SceneManager::DrawSprite()

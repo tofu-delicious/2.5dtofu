@@ -11,13 +11,11 @@ GameScene::~GameScene(){}
 
 void GameScene::Event()
 {
-	/*if (GetAsyncKeyState('T') & 0x8000)
+	//ポーズ画面表示
+	if (GetAsyncKeyState('Q') & 0x8000)
 	{
-		SceneManager::Instance().SetNextScene
-		(
-			SceneManager::SceneType::Title
-		);
-	}*/
+		SceneManager::Instance().PushOverlay(SceneManager::SceneType::Pause);
+	}
 
 	//カメラ更新処理
 	m_spCamera->Update();

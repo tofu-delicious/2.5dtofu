@@ -27,10 +27,10 @@ private :
 	static constexpr Math::Vector3 TILE_POS = { 0.0f,0.0f,0.0f };
 	static constexpr Math::Rectangle TILE_RECT = { 0,0,1280,720 };
 
-	static constexpr Math::Vector3 START_POS = { 0.0f,0.2f,0.0f };
+	static constexpr Math::Vector3 START_POS = { 0.0f,0.0f,0.0f };
 	static constexpr Math::Rectangle START_RECT = { 0,0,192,64 };
 
-	static constexpr Math::Vector3 SOUND_POS = { 0.0f,-0.2f,0.0f };
+	static constexpr Math::Vector3 SOUND_POS = { 0.0f,-100.0f,0.0f };
 	static constexpr Math::Rectangle SOUND_RECT = { 0,64,192,64 };
 
 	//======== インスタンス ==========

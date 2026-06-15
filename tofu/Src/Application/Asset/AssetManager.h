@@ -7,9 +7,6 @@ public:
 	
 	~C_AssetManager(){}
 
-	//インスタンスゲッター
-	static C_AssetManager& GetInstance();
-
 	//テキストファイル読み込み処理
 	void ReadFile(const std::string& a_fileName);
 

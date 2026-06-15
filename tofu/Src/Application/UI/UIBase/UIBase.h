@@ -18,12 +18,7 @@ public:
 
 	void DrawSprite()override;
 
-	void SetCamera(std::shared_ptr<KdCamera> a_spCamera) { m_wpCamera = a_spCamera; }
-
 protected:
-
-	//============ インスタンス =============
-	std::weak_ptr<KdCamera> m_wpCamera;
 
 	//============== 動的変数 ===============
 	Math::Vector3 m_pos;				//座標

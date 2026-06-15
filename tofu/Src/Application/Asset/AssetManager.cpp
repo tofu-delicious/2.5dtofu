@@ -1,12 +1,6 @@
 ﻿//AssetManager.cpp
 #include "AssetManager.h"
 
-C_AssetManager& C_AssetManager::GetInstance()
-{
-	static C_AssetManager Instance;
-	return Instance;
-}
-
 void C_AssetManager::ReadFile(const std::string& a_fileName)
 {
 	//ファイルを読み込みモードで開く
