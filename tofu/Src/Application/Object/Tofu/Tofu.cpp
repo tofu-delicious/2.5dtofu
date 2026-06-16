@@ -18,33 +18,31 @@ void C_Tofu::Init()
 	m_isJumping = false;
 
 	m_pos = INITIAL_POS;
-	m_move = {};
 	m_color = { 1,0.0,1 };
 	m_moveSpeed = 0.05f;
-	m_gravity = 0.0f;
+	m_gravity = 0.00001f;
 
 	//============= 初期化処理 ===============
+	UpdateMatrix();
 }
-
 void C_Tofu::PreUpdate()
 {
 	//入力取得などUpdate関数の前に必要な処理
-	MoveTofu();
+	JumpTofu();
 }
 
 void C_Tofu::Update()
 {
 	//リアルタイムで更新する
-	CommitPos();	//座標確定処理
-
-	UpdateMatrix();
 }
 
 void C_Tofu::PostUpdate()
 {
+	UpdateMatrix();
 	CheckRay();
 
 	//CheckSphere();
+	
 }
 
 void C_Tofu::DrawLit()
@@ -53,29 +51,20 @@ void C_Tofu::DrawLit()
 	KdShaderManager::Instance().m_StandardShader.DrawModel(*m_model, m_mWorld);
 }
 
-void C_Tofu::MoveTofu()
+void C_Tofu::JumpTofu()
 {
-	m_move.x = 0.0f;
-
 	bool currentSpace = GetAsyncKeyState(VK_SPACE) & 0x8000;
 
 	//スペースキーの連打制御 & ジャンプしていない
-	if (currentSpace && !m_isSpaceKey && !m_isJumping)
+	if (currentSpace)
 	{
-		m_move.y = JUMP_POW;	
-		m_gravity = 0.0f;		//ジャンプ時に重力をリセット
-		m_isJumping = true;
+		m_gravity = -JUMP_POW_Y;
 	}
-
-	m_gravity += GRAVITY_INCREMENT;		//自由落下の表現（枚フレーム重力を加算していく）
-	m_move.y -= m_gravity;				//ジャンプ直後は上向き、やがてマイナスになり落下する
-
 	m_isSpaceKey = currentSpace;
-}
 
-void C_Tofu::CommitPos()
-{
-	m_pos += m_move;
+	//重力を算出
+	m_pos.y -= m_gravity;
+	m_gravity += GRAVITY_INCREMENT;
 }
 
 void C_Tofu::UpdateMatrix()
@@ -91,9 +80,9 @@ void C_Tofu::CheckRay()
 	KdCollider::RayInfo ray;
 	float enableStepHigh = 0.1f;	//許容する段差の高さ
 
-	ray.m_pos = m_pos + Math::Vector3{0.0f,enableStepHigh,0.0f};				//0.2fの段差を許容する
+	ray.m_pos = m_pos + Math::Vector3{ 0.0f,enableStepHigh,0.0f };				//0.2fの段差を許容する
 	ray.m_dir = { 0,-1,0 };														//レイの方向（真下）
-	ray.m_range = (abs(m_move.y) + enableStepHigh) > MIN_RAY_RANGE ? (abs(m_move.y) + enableStepHigh) : MIN_RAY_RANGE;	//レイの長さ
+	ray.m_range = m_gravity + enableStepHigh; /*> MIN_RAY_RANGE ? (m_gravity + enableStepHigh) : MIN_RAY_RANGE;	*///レイの長さ
 	ray.m_type = KdCollider::TypeGround;										//地面に配置されているオブジェクトと判定を行う
 
 	//=========== レイデバッグ表示 ===========
@@ -125,10 +114,7 @@ void C_Tofu::CheckRay()
 	if (isHit)
 	{
 		m_pos = hitPos;
-		//m_pos.y -= enableStepHigh;
-		//m_pos.y += 0.2f;
-		m_move.y = 0.0f;
-		m_gravity = 0.0f;
+		m_gravity = 0.0f;					//m_gravityが0.0fのときは地面
 		m_isJumping = false;
 	}
 }

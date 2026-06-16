@@ -15,21 +15,37 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"Cube"
+			"name":"\u5e73\u9762",
+			"scale":[
+				0.21094058454036713,
+				0.21094058454036713,
+				0.21094058454036713
+			],
+			"translation":[
+				0,
+				0.01180465891957283,
+				0
+			]
 		}
 	],
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"Material.001",
+			"name":"\u30de\u30c6\u30ea\u30a2\u30eb",
 			"pbrMetallicRoughness":{
+				"baseColorFactor":[
+					0.800000011920929,
+					0.800000011920929,
+					0.800000011920929,
+					1
+				],
 				"metallicFactor":0
 			}
 		}
 	],
 	"meshes":[
 		{
-			"name":"Cube.001",
+			"name":"\u5e73\u9762",
 			"primitives":[
 				{
 					"attributes":{
@@ -47,68 +63,68 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":160,
+			"count":66,
 			"max":[
-				0.059031710028648376,
-				0.0744650736451149,
-				0.059031710028648376
+				1,
+				0.1742938756942749,
+				1.0153520107269287
 			],
 			"min":[
-				-0.059031710028648376,
-				-0.0003162380598951131,
-				-0.059031710028648376
+				-1,
+				-1.2230040624672256e-07,
+				-1
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":160,
+			"count":66,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":160,
+			"count":66,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
-			"count":780,
+			"count":384,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":1920,
+			"byteLength":792,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1920,
-			"byteOffset":1920,
+			"byteLength":792,
+			"byteOffset":792,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1280,
-			"byteOffset":3840,
+			"byteLength":528,
+			"byteOffset":1584,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1560,
-			"byteOffset":5120,
+			"byteLength":768,
+			"byteOffset":2112,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":6680,
-			"uri":"tofu.bin"
+			"byteLength":2880,
+			"uri":"water.bin"
 		}
 	]
 }

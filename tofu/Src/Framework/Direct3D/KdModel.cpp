@@ -104,10 +104,25 @@ void KdModelData::CreateNodes(const std::shared_ptr<KdGLTFModel>& spGltfModel)
 
 	// 当たり判定用ノードが1つも見つからなければ、m_drawMeshNodeと同じ割り当てを行い
 	// 見た目 = 当たり判定となる
+
+	//=== COLメッシュがない場合は従来通り元メッシュ流用 ===
 	if (!m_collisionMeshNodeIndices.size())
 	{
 		m_collisionMeshNodeIndices = m_drawMeshNodeIndices;
 	}
+	// COLメッシュがある場合は元メッシュ、COL両方が使われる
+	else
+	{
+		for (int idx : m_drawMeshNodeIndices)
+		{
+			m_collisionMeshNodeIndices.push_back(idx);
+		}
+	}
+
+	/*if (!m_collisionMeshNodeIndices.size())
+	{
+		m_collisionMeshNodeIndices = m_drawMeshNodeIndices;
+	}*/
 }
 
 // マテリアル作成

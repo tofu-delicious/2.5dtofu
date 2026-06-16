@@ -26,7 +26,7 @@ void C_Camera::Update()
 	//回転行列（R）0～360度はディグリー角、変換後はラジアン角
 	Math::Matrix _mRotation = Math::Matrix::CreateRotationX(DirectX::XMConvertToRadians(m_rotate));
 	//位置行列（T）　指定方法➀：Vector3型で渡す　指定方法➁：X・Y・Zの値を渡す
-	Math::Matrix _mTrans = Math::Matrix::CreateTranslation(m_pos + Math::Vector3{tofuPos.x,0.0f,0.0f});
+	Math::Matrix _mTrans = Math::Matrix::CreateTranslation(m_pos + Math::Vector3{tofuPos.x + 0.5f,0.0f,0.0f});
 	//合成行列（SRT）== ワールド行列
 	Math::Matrix _mWorld = _mScale * _mRotation * _mTrans;
 

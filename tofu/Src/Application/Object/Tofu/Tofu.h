@@ -15,10 +15,7 @@ public:
 	void DrawLit()		override;
 
 	//とうふの操作処理（ジャンプ）
-	void MoveTofu();
-
-	//座標確定処理
-	void CommitPos();
+	void JumpTofu();
 
 	//行列処理
 	void UpdateMatrix();
@@ -40,10 +37,10 @@ public:
 private:
 
 	//=============== 定数 =================
-	static constexpr Math::Vector3 INITIAL_POS = { 0.0f,0.65f,-0.1f };
+	static constexpr Math::Vector3 INITIAL_POS = { -0.5f,1.0f,-0.1f };
 	static constexpr float MIN_RAY_RANGE = 0.15f;						//RAYの最低保証
-	static constexpr float JUMP_POW = 0.06f;							//ジャンプ力
-	static constexpr float GRAVITY_INCREMENT = 0.00075f;					//重力減算値
+	static constexpr float JUMP_POW_Y = 0.1f;							//Y軸方向のジャンプ力
+	static constexpr float GRAVITY_INCREMENT = 0.005f;				//重力減算値
 
 	//============ 状態フラグ ==============
 	bool m_isSpaceKey = false;		//キー制御
