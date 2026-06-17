@@ -2,6 +2,7 @@
 #include"../SceneManager.h"
 #include "../../ImGui/ImGuiManager.h"
 #include "../../Camera/Camera.h"
+#include "../../Object/Tile/BackGroundScroller.h"
 #include "../../Object/Tofu/Tofu.h"
 #include "../../Object/Kitchen/KitchenManager.h"
 
@@ -29,6 +30,11 @@ void GameScene::Event()
 
 void GameScene::Init()
 {
+	//背景
+	m_back = std::make_shared<C_BackGroundScroller>();
+	m_back->Init();
+	m_objList.push_back(m_back);
+
 	//キッチン
 	m_kitchenMgr = std::make_shared<C_KitchenManager>();
 	m_kitchenMgr->Init();
@@ -65,4 +71,5 @@ void GameScene::SetUpImGuiManager()
 	//C_ImGuiManager::Instance().SetKitchen(m_kitchen);
 	C_ImGuiManager::Instance().SetKitchenMgr(m_kitchenMgr);
 	C_ImGuiManager::Instance().SetTofu(m_tofu);
+	C_ImGuiManager::Instance().SetBack(m_back);
 }

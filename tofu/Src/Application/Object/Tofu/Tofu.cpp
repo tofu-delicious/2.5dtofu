@@ -38,10 +38,9 @@ void C_Tofu::Update()
 void C_Tofu::PostUpdate()
 {
 	UpdateMatrix();
-	CheckRay();
 
+	CheckRay();
 	//CheckSphere();
-	
 }
 
 void C_Tofu::DrawLit()

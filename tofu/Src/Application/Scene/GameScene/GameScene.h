@@ -3,8 +3,9 @@
 #include"../BaseScene/BaseScene.h"
 
 //前方宣言
-class C_Tofu;
-class C_KitchenManager;
+class C_BackGroundScroller;	//背景スクロール
+class C_Tofu;				//とうふ
+class C_KitchenManager;		//キッチン
 
 class GameScene : public C_BaseScene
 {
@@ -25,6 +26,7 @@ private:
 	void Init()  override;
 
 	//=============== インスタンス =============
+	std::shared_ptr<C_BackGroundScroller> m_back = nullptr;
 	std::shared_ptr<C_Tofu> m_tofu = nullptr;
 	std::shared_ptr<C_KitchenManager> m_kitchenMgr = nullptr;
 

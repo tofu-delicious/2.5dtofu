@@ -73,7 +73,7 @@ public:
 	virtual void OnHit(){}
 
 	//ラジアン値を求める
-	float CalcRadian(float a_angle) { return DirectX::XMConvertToRadians(a_angle); }
+	float ConvertRadian(float a_angle) { return DirectX::XMConvertToRadians(a_angle); }
 
 protected:
 

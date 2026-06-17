@@ -285,6 +285,7 @@
     <ClInclude Include="Src\Application\Object\Kitchen\KitchenManager.h" />
     <ClInclude Include="Src\Application\Object\Kitchen\Kitchen\Kitchen.h" />
     <ClInclude Include="Src\Application\Object\ObjectBase\ObjectBase.h" />
+    <ClInclude Include="Src\Application\Object\Tile\BackGroundScroller.h" />
     <ClInclude Include="Src\Application\Object\Tofu\Tofu.h" />
     <ClInclude Include="Src\Application\Scene\BaseScene\BaseScene.h" />
     <ClInclude Include="Src\Application\Scene\GameScene\GameScene.h" />
@@ -356,6 +357,7 @@
     <ClCompile Include="Src\Application\Object\Kitchen\KitchenManager.cpp" />
     <ClCompile Include="Src\Application\Object\Kitchen\Kitchen\Kitchen.cpp" />
     <ClCompile Include="Src\Application\Object\ObjectBase\ObjectBase.cpp" />
+    <ClCompile Include="Src\Application\Object\Tile\BackGroundScroller.cpp" />
     <ClCompile Include="Src\Application\Object\Tofu\Tofu.cpp" />
     <ClCompile Include="Src\Application\Scene\BaseScene\BaseScene.cpp" />
     <ClCompile Include="Src\Application\Scene\GameScene\GameScene.cpp" />

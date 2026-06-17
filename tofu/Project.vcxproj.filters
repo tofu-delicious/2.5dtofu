@@ -139,6 +139,9 @@
     <Filter Include="Src\Application\ImGui">
       <UniqueIdentifier>{29c0a67b-b45b-491e-8b67-a33bdc8712f7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\Object\Tile">
+      <UniqueIdentifier>{2d7cd532-09c0-4a4e-a4e2-63619d50e348}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -369,6 +372,9 @@
     <ClInclude Include="Src\Application\ImGui\ImGuiManager.h">
       <Filter>Src\Application\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Application\Object\Tile\BackGroundScroller.h">
+      <Filter>Src\Application\Object\Tile</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pch.cpp">
@@ -568,6 +574,9 @@
     </ClCompile>
     <ClCompile Include="Src\Application\ImGui\ImGuiManager.cpp">
       <Filter>Src\Application\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Tile\BackGroundScroller.cpp">
+      <Filter>Src\Application\Object\Tile</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
