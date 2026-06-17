@@ -10,10 +10,13 @@ void C_UIBase::Init(const Math::Vector3& a_pos, const Math::Rectangle& a_rect, s
 	m_scaleX = a_scaleX;
 	m_scaleY = a_scaleY;
 	m_rotate = a_rotate;
+	m_isActive = false;
 }
 
 void C_UIBase::DrawSprite()
 {
+	if (!m_isActive)return;
+
 	//不透明度指定
 	Math::Color color(1.0f, 1.0f, 1.0f, m_alpha);
 

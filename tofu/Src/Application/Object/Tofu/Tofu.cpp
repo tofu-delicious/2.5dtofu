@@ -19,8 +19,7 @@ void C_Tofu::Init()
 
 	m_pos = INITIAL_POS;
 	m_color = { 1,0.0,1 };
-	m_moveSpeed = 0.05f;
-	m_gravity = 0.00001f;
+	m_gravity = 0.01f;
 
 	//============= 初期化処理 ===============
 	UpdateMatrix();
@@ -56,10 +55,12 @@ void C_Tofu::JumpTofu()
 	bool currentSpace = GetAsyncKeyState(VK_SPACE) & 0x8000;
 
 	//スペースキーの連打制御 & ジャンプしていない
-	if (currentSpace)
+	if (currentSpace && !m_isSpaceKey && !m_isJumping)
 	{
 		m_gravity = -JUMP_POW_Y;
+		m_isJumping = true;
 	}
+
 	m_isSpaceKey = currentSpace;
 
 	//重力を算出

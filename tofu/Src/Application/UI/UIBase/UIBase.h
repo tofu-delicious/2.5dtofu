@@ -18,7 +18,12 @@ public:
 
 	void DrawSprite()override;
 
+	void SetActive(bool a_isActive) { m_isActive = a_isActive; }
+
 protected:
+
+	//============= 状態フラグ ==============
+	bool m_isActive = false;			//true：有効
 
 	//============== 動的変数 ===============
 	Math::Vector3 m_pos;				//座標

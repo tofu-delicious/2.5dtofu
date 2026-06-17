@@ -39,8 +39,8 @@ private:
 	//=============== 定数 =================
 	static constexpr Math::Vector3 INITIAL_POS = { -0.5f,1.0f,-0.1f };
 	static constexpr float MIN_RAY_RANGE = 0.15f;						//RAYの最低保証
-	static constexpr float JUMP_POW_Y = 0.1f;							//Y軸方向のジャンプ力
-	static constexpr float GRAVITY_INCREMENT = 0.005f;				//重力減算値
+	static constexpr float JUMP_POW_Y = 0.04f;							//Y軸方向のジャンプ力
+	static constexpr float GRAVITY_INCREMENT = 0.003f;				//重力減算値
 
 	//============ 状態フラグ ==============
 	bool m_isSpaceKey = false;		//キー制御
@@ -48,6 +48,5 @@ private:
 	bool m_isDebugOpen = false;		//true：デバッグウィンドウが開いている　false：開いていない
 
 	//============= 動的変数 ===============
-	float m_moveSpeed = 0.0f;	//スピード
-	float m_gravity = 0.0f;		//重力（ジャンプ処理）
+	float m_gravity = 0.0f;			//重力（ジャンプ処理）
 };
