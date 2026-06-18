@@ -1,10 +1,10 @@
 ﻿//GimmickFactory.h
 #pragma once
 #include "../GimmickBase/GimmickBase.h"
-#include "../Liquid/Water/Water.h"			//水
-#include "../Liquid/Oil/Oil.h"				//油
-#include "../Vessel/Pot/Pot.h"				//鍋
-#include "../Tool/Obstacle/Obstacle.h"		//障害物
+#include "../Liquid/Water/Water.h"				//水
+#include "../Liquid/Oil/Oil.h"					//油
+#include "../Vessel/Pot/Pot.h"					//鍋
+#include "../Tool/CuttingBoard/CuttingBoard.h"	//まな板
 
 class C_GimmickFactory
 {

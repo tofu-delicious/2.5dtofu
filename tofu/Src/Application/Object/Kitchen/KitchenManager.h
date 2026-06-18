@@ -51,8 +51,4 @@ private:
 	bool m_isDebugOpen = false;
 
 	//============== 動的変数 ===============
-	//float SCROLL_SPEED = 0.05f;			//スクロール速度
-	//float SPAWN_THRESHOLD = 5.0f;		//次のキッチンを出すX座標のしきい値
-	//float DESTROY_THRESHOLD = -20.0f;	//キッチンを消すX座標のしきい値
-	//float SPAWN_POS_X = 15.0f;			//キッチンを画面右端に出すX座標
 };

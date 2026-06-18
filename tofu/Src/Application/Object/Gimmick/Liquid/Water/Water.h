@@ -13,8 +13,8 @@ public:
 	void DrawLit()override;
 	
 	//水状態を返す
-	FormType GetFormType() const override
+	LiquidType GetLiquidType() const override
 	{
-		return FormType::Water;
+		return LiquidType::Water;
 	}
 };

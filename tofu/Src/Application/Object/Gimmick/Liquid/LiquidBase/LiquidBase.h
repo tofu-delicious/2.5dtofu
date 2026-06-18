@@ -14,12 +14,12 @@ public:
 		return GimmickType::Liquid;
 	}
 
-	// 何形態に変化するか（Water・Oilで異なる）
-	enum class FormType
+	// 液体の種類（何がトリガーになるか）
+	enum class LiquidType
 	{
-		Water,  // 水形態
-		Oil,    // 油形態
+		Water,  // 水形態：油状態を解除する
+		Oil,    // 油形態：揚げ豆腐形態にする
 	};
 
-	virtual FormType GetFormType() const = 0;
+	virtual LiquidType GetLiquidType() const = 0;
 };

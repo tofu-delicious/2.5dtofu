@@ -13,7 +13,4 @@ public:
 	{
 		return GimmickType::Tool;
 	}
-
-protected:
-	std::shared_ptr<KdModelData> m_model;
 };

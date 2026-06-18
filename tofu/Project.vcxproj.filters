@@ -151,9 +151,6 @@
     <Filter Include="Src\Application\Object\Gimmick\LIquid\Water">
       <UniqueIdentifier>{19724fd0-eac3-4cba-b0a7-542265661e92}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Src\Application\Object\Gimmick\Tool\Obstacle">
-      <UniqueIdentifier>{1f5e383d-96f6-4b64-9e8f-b8e5190d7720}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Src\Application\Object\Gimmick\Vessel\Pot">
       <UniqueIdentifier>{9684c097-9b21-42d4-8a76-3f5c0abdcd58}</UniqueIdentifier>
     </Filter>
@@ -165,6 +162,9 @@
     </Filter>
     <Filter Include="Src\Application\Object\Gimmick\Tool\ToolBase">
       <UniqueIdentifier>{d6126a86-e842-4bac-80fb-03d28c48f517}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Gimmick\Tool\CuttingBoard">
+      <UniqueIdentifier>{d73a7ac4-dc54-47dc-8321-10f0a839e3ca}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -399,9 +399,6 @@
     <ClInclude Include="Src\Application\Object\Gimmick\Liquid\Oil\Oil.h">
       <Filter>Src\Application\Object\Gimmick\LIquid\Oil</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Application\Object\Gimmick\Tool\Obstacle\Obstacle.h">
-      <Filter>Src\Application\Object\Gimmick\Tool\Obstacle</Filter>
-    </ClInclude>
     <ClInclude Include="Src\Application\Object\Gimmick\Vessel\Pot\Pot.h">
       <Filter>Src\Application\Object\Gimmick\Vessel\Pot</Filter>
     </ClInclude>
@@ -413,6 +410,9 @@
     </ClInclude>
     <ClInclude Include="Src\Application\Object\Gimmick\Tool\ToolBase\ToolBase.h">
       <Filter>Src\Application\Object\Gimmick\Tool\ToolBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Gimmick\Tool\CuttingBoard\CuttingBoard.h">
+      <Filter>Src\Application\Object\Gimmick\Tool\CuttingBoard</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -617,9 +617,6 @@
     <ClCompile Include="Src\Application\Object\Gimmick\Liquid\Oil\Oil.cpp">
       <Filter>Src\Application\Object\Gimmick\LIquid\Oil</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Application\Object\Gimmick\Tool\Obstacle\Obstacle.cpp">
-      <Filter>Src\Application\Object\Gimmick\Tool\Obstacle</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Application\Object\Gimmick\Vessel\Pot\Pot.cpp">
       <Filter>Src\Application\Object\Gimmick\Vessel\Pot</Filter>
     </ClCompile>
@@ -631,6 +628,9 @@
     </ClCompile>
     <ClCompile Include="Src\Application\Object\Gimmick\Tool\ToolBase\ToolBase.cpp">
       <Filter>Src\Application\Object\Gimmick\Tool\ToolBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Gimmick\Tool\CuttingBoard\CuttingBoard.cpp">
+      <Filter>Src\Application\Object\Gimmick\Tool\CuttingBoard</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -49,7 +49,7 @@ C_GimmickFactory::GetNextPattern(float kitchenBaseX, float scrollSpeed)
 			break;
 
 		case C_GimmickBase::GimmickType::Tool:
-			gimmick = std::make_shared<C_Obstacle>();
+			gimmick = std::make_shared<C_CuttingBoard>();
 			break;
 
 		default:

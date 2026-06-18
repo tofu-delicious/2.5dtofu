@@ -7,3 +7,7 @@ Model Tofu Asset/Models/Tofu/Tofu/tofu.gltf
 Model Kitchen Asset/Models/Kitchen/Kitchen/kitchen.gltf
 Model SimpleKitchen Asset/Models/SimpleKitchen/SimpleKitchen/simple.gltf
 Model Water Asset/Models/Water/Water/water.gltf
+Model Oil Asset/Models/Oil/Oil/oil.gltf
+Model Pot Asset/Models/Pot/Pot/pot.gltf
+Model CuttingBoard Asset/Models/CuttingBoard/CuttingBoard/cuttingBoard.gltf
+

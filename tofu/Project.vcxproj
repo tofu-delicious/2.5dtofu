@@ -282,7 +282,7 @@
     <ClInclude Include="Src\Application\Object\Gimmick\Liquid\LiquidBase\LiquidBase.h" />
     <ClInclude Include="Src\Application\Object\Gimmick\Liquid\Oil\Oil.h" />
     <ClInclude Include="Src\Application\Object\Gimmick\Liquid\Water\Water.h" />
-    <ClInclude Include="Src\Application\Object\Gimmick\Tool\Obstacle\Obstacle.h" />
+    <ClInclude Include="Src\Application\Object\Gimmick\Tool\CuttingBoard\CuttingBoard.h" />
     <ClInclude Include="Src\Application\Object\Gimmick\Tool\ToolBase\ToolBase.h" />
     <ClInclude Include="Src\Application\Object\Gimmick\Vessel\Pot\Pot.h" />
     <ClInclude Include="Src\Application\Object\Gimmick\Vessel\VesselBase\VesselBase.h" />
@@ -359,7 +359,7 @@
     <ClCompile Include="Src\Application\Object\Gimmick\Liquid\LiquidBase\LiquidBase.cpp" />
     <ClCompile Include="Src\Application\Object\Gimmick\Liquid\Oil\Oil.cpp" />
     <ClCompile Include="Src\Application\Object\Gimmick\Liquid\Water\Water.cpp" />
-    <ClCompile Include="Src\Application\Object\Gimmick\Tool\Obstacle\Obstacle.cpp" />
+    <ClCompile Include="Src\Application\Object\Gimmick\Tool\CuttingBoard\CuttingBoard.cpp" />
     <ClCompile Include="Src\Application\Object\Gimmick\Tool\ToolBase\ToolBase.cpp" />
     <ClCompile Include="Src\Application\Object\Gimmick\Vessel\Pot\Pot.cpp" />
     <ClCompile Include="Src\Application\Object\Gimmick\Vessel\VesselBase\VesselBase.cpp" />

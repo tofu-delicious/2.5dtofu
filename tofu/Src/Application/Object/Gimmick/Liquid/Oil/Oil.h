@@ -12,8 +12,8 @@ public:
 	void DrawLit()  override;
 
 	// 油形態を返す
-	FormType GetFormType() const override
+	LiquidType GetLiquidType() const override
 	{
-		return FormType::Oil;
+		return LiquidType::Oil;
 	}
 };
