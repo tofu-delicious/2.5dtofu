@@ -118,15 +118,6 @@
     <Filter Include="Src\Application\Object\Gimmick\GimmickBase">
       <UniqueIdentifier>{92278f45-8453-414a-af2d-efbb7554fca1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Src\Application\Object\Gimmick\Water">
-      <UniqueIdentifier>{e11de046-22f0-46ab-be3b-26acac7fc38f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Src\Application\Object\Gimmick\Oil">
-      <UniqueIdentifier>{98f2bd27-d38a-4676-aa37-4bc42cb3a73e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Src\Application\Object\Gimmick\Obstacle">
-      <UniqueIdentifier>{682585bb-1b73-4b7e-9353-c736e533aa3f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Src\Application\Object\Kitchen">
       <UniqueIdentifier>{4296c6c0-e48f-4858-801b-42d8af09c5a4}</UniqueIdentifier>
     </Filter>
@@ -141,6 +132,39 @@
     </Filter>
     <Filter Include="Src\Application\Object\Tile">
       <UniqueIdentifier>{2d7cd532-09c0-4a4e-a4e2-63619d50e348}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Gimmick\Factory">
+      <UniqueIdentifier>{61555468-1b24-443e-b058-067ce9f5e441}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Gimmick\LIquid">
+      <UniqueIdentifier>{d18ec4af-9918-497e-9f74-ee9377406e35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Gimmick\Tool">
+      <UniqueIdentifier>{fa3ec1ed-0c17-4683-b33a-4c543a0d5372}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Gimmick\Vessel">
+      <UniqueIdentifier>{618cfd5c-76d2-463b-994d-ec6af30da6b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Gimmick\LIquid\Oil">
+      <UniqueIdentifier>{6b66b7cc-b494-41d9-a1d6-b00f99f8053b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Gimmick\LIquid\Water">
+      <UniqueIdentifier>{19724fd0-eac3-4cba-b0a7-542265661e92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Gimmick\Tool\Obstacle">
+      <UniqueIdentifier>{1f5e383d-96f6-4b64-9e8f-b8e5190d7720}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Gimmick\Vessel\Pot">
+      <UniqueIdentifier>{9684c097-9b21-42d4-8a76-3f5c0abdcd58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Gimmick\LIquid\LiquidBase">
+      <UniqueIdentifier>{5e0b4caa-1850-4db7-a81c-c464f7ebe518}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Gimmick\Vessel\VesselBase">
+      <UniqueIdentifier>{e5c26d80-c039-4f8d-a07f-9c7aa3435597}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Gimmick\Tool\ToolBase">
+      <UniqueIdentifier>{d6126a86-e842-4bac-80fb-03d28c48f517}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -351,15 +375,6 @@
     <ClInclude Include="Src\Application\Object\Gimmick\GimmickBase\GimmickBase.h">
       <Filter>Src\Application\Object\Gimmick\GimmickBase</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Application\Object\Gimmick\Water\Water.h">
-      <Filter>Src\Application\Object\Gimmick\Water</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Application\Object\Gimmick\Oil\Oil.h">
-      <Filter>Src\Application\Object\Gimmick\Oil</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Application\Object\Gimmick\Obstacle\Obstacle.h">
-      <Filter>Src\Application\Object\Gimmick\Obstacle</Filter>
-    </ClInclude>
     <ClInclude Include="Src\Application\Object\Kitchen\Kitchen\Kitchen.h">
       <Filter>Src\Application\Object\Kitchen\Kitchen</Filter>
     </ClInclude>
@@ -374,6 +389,30 @@
     </ClInclude>
     <ClInclude Include="Src\Application\Object\Tile\BackGroundScroller.h">
       <Filter>Src\Application\Object\Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Gimmick\Factory\GimmickFactory.h">
+      <Filter>Src\Application\Object\Gimmick\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Gimmick\Liquid\Water\Water.h">
+      <Filter>Src\Application\Object\Gimmick\LIquid\Water</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Gimmick\Liquid\Oil\Oil.h">
+      <Filter>Src\Application\Object\Gimmick\LIquid\Oil</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Gimmick\Tool\Obstacle\Obstacle.h">
+      <Filter>Src\Application\Object\Gimmick\Tool\Obstacle</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Gimmick\Vessel\Pot\Pot.h">
+      <Filter>Src\Application\Object\Gimmick\Vessel\Pot</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Gimmick\Liquid\LiquidBase\LiquidBase.h">
+      <Filter>Src\Application\Object\Gimmick\LIquid\LiquidBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Gimmick\Vessel\VesselBase\VesselBase.h">
+      <Filter>Src\Application\Object\Gimmick\Vessel\VesselBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Gimmick\Tool\ToolBase\ToolBase.h">
+      <Filter>Src\Application\Object\Gimmick\Tool\ToolBase</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -554,15 +593,6 @@
     <ClCompile Include="Src\Application\Object\Gimmick\GimmickBase\GimmickBase.cpp">
       <Filter>Src\Application\Object\Gimmick\GimmickBase</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Application\Object\Gimmick\Water\Water.cpp">
-      <Filter>Src\Application\Object\Gimmick\Water</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Application\Object\Gimmick\Oil\Oil.cpp">
-      <Filter>Src\Application\Object\Gimmick\Oil</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Application\Object\Gimmick\Obstacle\Obstacle.cpp">
-      <Filter>Src\Application\Object\Gimmick\Obstacle</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Application\Object\Kitchen\Kitchen\Kitchen.cpp">
       <Filter>Src\Application\Object\Kitchen\Kitchen</Filter>
     </ClCompile>
@@ -577,6 +607,30 @@
     </ClCompile>
     <ClCompile Include="Src\Application\Object\Tile\BackGroundScroller.cpp">
       <Filter>Src\Application\Object\Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Gimmick\Factory\GimmickFactory.cpp">
+      <Filter>Src\Application\Object\Gimmick\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Gimmick\Liquid\Water\Water.cpp">
+      <Filter>Src\Application\Object\Gimmick\LIquid\Water</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Gimmick\Liquid\Oil\Oil.cpp">
+      <Filter>Src\Application\Object\Gimmick\LIquid\Oil</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Gimmick\Tool\Obstacle\Obstacle.cpp">
+      <Filter>Src\Application\Object\Gimmick\Tool\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Gimmick\Vessel\Pot\Pot.cpp">
+      <Filter>Src\Application\Object\Gimmick\Vessel\Pot</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Gimmick\Liquid\LiquidBase\LiquidBase.cpp">
+      <Filter>Src\Application\Object\Gimmick\LIquid\LiquidBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Gimmick\Vessel\VesselBase\VesselBase.cpp">
+      <Filter>Src\Application\Object\Gimmick\Vessel\VesselBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Gimmick\Tool\ToolBase\ToolBase.cpp">
+      <Filter>Src\Application\Object\Gimmick\Tool\ToolBase</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

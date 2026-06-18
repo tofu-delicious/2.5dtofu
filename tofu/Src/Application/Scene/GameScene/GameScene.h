@@ -6,6 +6,7 @@
 class C_BackGroundScroller;	//背景スクロール
 class C_Tofu;				//とうふ
 class C_KitchenManager;		//キッチン
+class C_GimmickBase;		//ギミック基底クラス
 
 class GameScene : public C_BaseScene
 {
@@ -16,6 +17,9 @@ public :
 
 	//「m_kitchens」の内容を「m_objList」へ格納
 	void SyncKitchensObjList();
+
+	//「m_gimmicks」の内容を「m_objList」へ格納
+	void SyncGimmicksObjList();
 
 	//ImGuiManagerへインスタンス情報を送る関数
 	void SetUpImGuiManager();

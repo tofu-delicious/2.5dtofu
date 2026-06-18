@@ -26,6 +26,9 @@ void GameScene::Event()
 
 	//新しく追加されたキッチンを「objList」へ同期
 	SyncKitchensObjList();
+
+	//ギミック関連をm_objListに格納
+	SyncGimmicksObjList();
 }
 
 void GameScene::Init()
@@ -51,6 +54,8 @@ void GameScene::Init()
 
 	SyncKitchensObjList();
 
+	SyncGimmicksObjList();
+
 	SetUpImGuiManager();
 }
 
@@ -62,6 +67,16 @@ void GameScene::SyncKitchensObjList()
 		auto it = std::find(m_objList.begin(), m_objList.end(), kitchen);
 		if (it == m_objList.end())
 			m_objList.push_back(kitchen);
+	}
+}
+
+void GameScene::SyncGimmicksObjList()
+{
+	for (auto& gimmick : m_kitchenMgr->GetGimmicks())
+	{
+		auto it = std::find(m_objList.begin(), m_objList.end(), gimmick);
+		if (it == m_objList.end())
+			m_objList.push_back(gimmick);
 	}
 }
 
