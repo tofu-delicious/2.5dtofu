@@ -5,6 +5,7 @@
 #include "../Object/Kitchen/KitchenManager.h"
 #include "../Object/Tofu/Tofu.h"
 #include "../Object/Tile/BackGroundScroller.h"
+#include "../Object/Gimmick/Vessel/Pot/Pot.h"
 
 void C_ImGuiManager::ImGui()
 {
@@ -19,6 +20,7 @@ void C_ImGuiManager::ImGui()
 		if (!m_wpKitchenMgr.expired())	m_wpKitchenMgr.lock()->ImGui();	//C_KitchenManager
 		if (!m_wpTofu.expired())		m_wpTofu.lock()->ImGui();		//C_Tofu
 		if (!m_wpBack.expired())		m_wpBack.lock()->ImGui();		//C_BackGroundScroller
+		if (!m_wpPot.expired())			m_wpPot.lock()->ImGui();		//C_Pot
 	}
 	ImGui::End();
 }

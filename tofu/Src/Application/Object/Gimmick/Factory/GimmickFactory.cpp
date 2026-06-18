@@ -9,9 +9,9 @@ C_GimmickFactory::PATTERN =
 
 	// パターン1：鍋（器）+ 油（液体）+ 障害物
 	{
-		{ C_GimmickBase::GimmickType::Vessel, Pot,      0.0f, 0.0f, 0.0f },
-		{ C_GimmickBase::GimmickType::Liquid, Oil,      0.0f, 0.1f, 0.0f },
-		{ C_GimmickBase::GimmickType::Tool,   Obstacle, 1.2f, 0.0f, 0.0f },
+		{ C_GimmickBase::GimmickType::Vessel, Pot,      0.0f, 0.2f, 0.0f },
+		{ C_GimmickBase::GimmickType::Liquid, Oil,      0.0f, 0.2f, 0.0f },
+		{ C_GimmickBase::GimmickType::Tool,   Obstacle, 1.2f, 0.2f, 0.0f },
 	},
 
 	// パターン2：鍋（器）+ 水（液体）
@@ -59,6 +59,7 @@ C_GimmickFactory::GetNextPattern(float kitchenBaseX, float scrollSpeed)
 		gimmick->Init();
 		gimmick->SetScrollSpeed(scrollSpeed);
 		gimmick->SetPos({ kitchenBaseX + p.offsetX, p.offsetY, p.offsetZ });
+		gimmick->UpdateMatrix();
 		result.push_back(gimmick);
 	}
 

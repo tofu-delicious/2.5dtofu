@@ -7,6 +7,7 @@ class C_Kitchen;
 class C_KitchenManager;
 class C_Tofu;
 class C_BackGroundScroller;
+class C_Pot;
 
 class C_ImGuiManager
 {
@@ -22,6 +23,7 @@ public:
 	void SetKitchenMgr(std::shared_ptr<C_KitchenManager> a_spKitchenMgr) { m_wpKitchenMgr = a_spKitchenMgr; }
 	void SetTofu(std::shared_ptr<C_Tofu> a_spTofu) { m_wpTofu = a_spTofu; }
 	void SetBack(std::shared_ptr<C_BackGroundScroller> a_spBack) { m_wpBack = a_spBack; }
+	void SetPot(std::shared_ptr<C_Pot> a_spPot) { m_wpPot = a_spPot; }
 
 private:
 
@@ -33,6 +35,7 @@ private:
 	std::weak_ptr<C_KitchenManager> m_wpKitchenMgr;
 	std::weak_ptr<C_Tofu> m_wpTofu;
 	std::weak_ptr<C_BackGroundScroller> m_wpBack;
+	std::weak_ptr<C_Pot> m_wpPot;
 
 public:
 

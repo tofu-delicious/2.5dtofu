@@ -10,4 +10,5 @@ public:
 
 	void Init()     override;
 	void DrawLit()  override;
+	void ImGui()	override;
 };

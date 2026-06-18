@@ -31,36 +31,15 @@ void C_KitchenManager::Update()
 			return k->GetPos().x < DESTROY_THRESHOLD;	//X座標が-3.0f未満（画面左端より外）なら削除対象としてtrueを返す。
 		});
 
-	//画面外ギミック削除
-	m_gimmicks.remove_if([](const std::shared_ptr<C_GimmickBase>& g)
-		{
-			return g->IsExpired();
-		});
-
-	//ギミック更新
-	for (auto& gimmick : m_gimmicks)
-	{
-		gimmick->Update();
-	}
-
-
 	//最後のキッチンが一定位置まで来たら次を生成
 	if (!m_kitchens.empty() && m_kitchens.back()->GetPos().x < SPAWN_THRESHOLD)
 	{
-		auto next = m_kitchenFactory.GetNext();									
+		auto next = m_kitchenFactory.GetNext();
 		float nextX = m_kitchens.back()->GetPos().x + KITCHEN_WIDTH;	//キッチンの末尾の要素にキッチンの横幅を加えた座標に表示する
-		next->SetPos(Math::Vector3{nextX,INITIAL_POS.y,INITIAL_POS.z});
+		next->SetPos(Math::Vector3{ nextX,INITIAL_POS.y,INITIAL_POS.z });
 		next->UpdateMatrix();
 		m_kitchens.push_back(next);
-
-		//キッチン生成と同時にギミックも生成
-		auto newGimmicks = m_gimmickFactory.GetNextPattern(nextX, SCROLL_SPEED);
-		for (auto& g : newGimmicks)
-		{
-			m_gimmicks.push_back(g);
-		}
 	}
-
 }
 
 void C_KitchenManager::ImGui()

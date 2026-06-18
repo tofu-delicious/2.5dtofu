@@ -1,7 +1,6 @@
 ﻿//KitchenFactory.h
 #pragma once
 #include "../Kitchen/Factory/KitchenFactory.h"
-#include "../Gimmick/Factory/GimmickFactory.h"
 
 class C_KitchenManager
 {
@@ -18,12 +17,6 @@ public:
 		return m_kitchens;
 	}
 
-	//objListに渡すため、外部から参照できるようにする
-	const std::list<std::shared_ptr<C_GimmickBase>>& GetGimmicks() const
-	{
-		return m_gimmicks;
-	}
-
 	//============= デバッグ ================
 	void ImGui();
 
@@ -32,11 +25,9 @@ private:
 	//===== インスタンス・可変長配列 ========
 	//キッチンのリスト
 	std::list<std::shared_ptr<C_Kitchen>> m_kitchens;
-	std::list<std::shared_ptr<C_GimmickBase>> m_gimmicks;
 
 	//生成クラス
-	C_KitchenFactory m_kitchenFactory;;
-	C_GimmickFactory m_gimmickFactory;
+	C_KitchenFactory m_kitchenFactory;
 
 	//================ 定数 =================
 	static constexpr Math::Vector3 INITIAL_POS = Math::Vector3{ 0.0f,0.7f,0.0f };	//キッチンの初期座標
