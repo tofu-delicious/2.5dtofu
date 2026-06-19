@@ -9,12 +9,12 @@ const std::vector<std::vector<C_GimmickFactory::GimmickPlacement>>
 C_GimmickFactory::PATTERN =
 {
 	// パターン0：ギミックなし（コンロありでも何も置かないケース）
-	{},
+	//{},
 
 	// パターン1：鍋 + 油 + まな板
 	{
-		{ C_GimmickBase::GimmickType::Vessel, Pot,          -0.75f, 0.7f, -0.02f },
-		{ C_GimmickBase::GimmickType::Liquid, Oil,          -0.75f,  0.72f, -0.02f },
+		{ C_GimmickBase::GimmickType::Vessel, Pot,          -0.95f, 0.7f, -0.15f },
+		{ C_GimmickBase::GimmickType::Liquid, Oil,          -0.95f, 0.82f, -0.15f},
 		//{ C_GimmickBase::GimmickType::Tool,   CuttingBoard,  0.4f,   0.0f,  0.0f  },
 	},
 

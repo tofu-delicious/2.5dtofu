@@ -31,6 +31,6 @@ private:
 	std::shared_ptr<C_GimmickManager>    m_gimmickMgr = nullptr; // 追加
 
 	//================= 定数 ===============
-	static constexpr Math::Vector3 CAMERA_POS = { 0.0f, 1.0f, -1.0f };
-	static constexpr float         CAMERA_ROTATE = 10.0f;
+	static constexpr Math::Vector3 CAMERA_POS = { 0.0f, 1.1f, -1.0f };
+	static constexpr float         CAMERA_ROTATE = 15.0f;
 };
