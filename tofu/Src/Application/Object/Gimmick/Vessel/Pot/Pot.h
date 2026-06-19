@@ -10,5 +10,9 @@ public:
 
 	void Init()     override;
 	void DrawLit()  override;
-	void ImGui()	override;
+
+private:
+
+	//============ 定数 ==============
+	static constexpr Math::Vector3 INITIAL_POS = { 0.0f,0.7f,0.2f};
 };

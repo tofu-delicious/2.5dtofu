@@ -10,6 +10,10 @@ void C_Pot::Init()
 	// 縁にぶつかる → TypeBump
 	m_pCollider->RegisterCollisionShape(
 		"PotCollision", m_model, KdCollider::Type::TypeBump);
+
+	m_mWorld = Math::Matrix::Identity;
+
+	m_pos = INITIAL_POS;
 }
 
 void C_Pot::DrawLit()
@@ -17,18 +21,9 @@ void C_Pot::DrawLit()
 	KdShaderManager::Instance().m_StandardShader.DrawModel(
 		*m_model, m_mWorld);
 }
+//なんとなくここにコメントを残す
+/*
 
-void C_Pot::ImGui()
-{
-	//Sameline()：次のウィジェットを横方向に位置付ける
-	ImGui::SameLine();
+//お腹へった
 
-	if (ImGui::Button("Pot")) m_isDebugOpen = !m_isDebugOpen;
-
-	if (m_isDebugOpen)
-	{
-		ImGui::Text("m_pos.x : %.2f", m_pos.x);
-		ImGui::Text("m_pos.y : %.2f", m_pos.y);
-		ImGui::Text("m_pos.z : %.2f", m_pos.z);
-	}
-}
+*/

@@ -414,6 +414,9 @@
     <ClInclude Include="Src\Application\Object\Gimmick\Tool\CuttingBoard\CuttingBoard.h">
       <Filter>Src\Application\Object\Gimmick\Tool\CuttingBoard</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Application\Object\Gimmick\GimmickManager.h">
+      <Filter>Src\Application\Object\Gimmick</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pch.cpp">
@@ -631,6 +634,9 @@
     </ClCompile>
     <ClCompile Include="Src\Application\Object\Gimmick\Tool\CuttingBoard\CuttingBoard.cpp">
       <Filter>Src\Application\Object\Gimmick\Tool\CuttingBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Gimmick\GimmickManager.cpp">
+      <Filter>Src\Application\Object\Gimmick</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

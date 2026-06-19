@@ -11,6 +11,9 @@ void C_CuttingBoard::Init()
 		"ObstacleCollision", m_model, KdCollider::Type::TypeBump);
 }
 
+void C_CuttingBoard::Update()
+{}
+
 void C_CuttingBoard::DrawLit()
 {
 	KdShaderManager::Instance().m_StandardShader.DrawModel(

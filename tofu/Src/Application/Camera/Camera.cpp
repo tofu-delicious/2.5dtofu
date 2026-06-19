@@ -47,6 +47,7 @@ void C_Camera::ImGui()
 		ImGui::SliderFloat("posX", &m_pos.x, -640.0f, 640.0f);
 		ImGui::SliderFloat("posY", &m_pos.y, -360.0f, 360.0f);
 		ImGui::SliderFloat("posZ", &m_pos.z, -100.0f, 100.0f);
+		ImGui::SliderFloat("rotate", &m_rotate, -360.0f, 360.0f);
 
 		ImGui::Text("pos : % .2f, % .2f, % .2f", m_pos.x, m_pos.y, m_pos.z);
 	}

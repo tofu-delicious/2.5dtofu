@@ -279,6 +279,7 @@
     <ClInclude Include="Src\Application\main.h" />
     <ClInclude Include="Src\Application\Object\Gimmick\Factory\GimmickFactory.h" />
     <ClInclude Include="Src\Application\Object\Gimmick\GimmickBase\GimmickBase.h" />
+    <ClInclude Include="Src\Application\Object\Gimmick\GimmickManager.h" />
     <ClInclude Include="Src\Application\Object\Gimmick\Liquid\LiquidBase\LiquidBase.h" />
     <ClInclude Include="Src\Application\Object\Gimmick\Liquid\Oil\Oil.h" />
     <ClInclude Include="Src\Application\Object\Gimmick\Liquid\Water\Water.h" />
@@ -356,6 +357,7 @@
     <ClCompile Include="Src\Application\main.cpp" />
     <ClCompile Include="Src\Application\Object\Gimmick\Factory\GimmickFactory.cpp" />
     <ClCompile Include="Src\Application\Object\Gimmick\GimmickBase\GimmickBase.cpp" />
+    <ClCompile Include="Src\Application\Object\Gimmick\GimmickManager.cpp" />
     <ClCompile Include="Src\Application\Object\Gimmick\Liquid\LiquidBase\LiquidBase.cpp" />
     <ClCompile Include="Src\Application\Object\Gimmick\Liquid\Oil\Oil.cpp" />
     <ClCompile Include="Src\Application\Object\Gimmick\Liquid\Water\Water.cpp" />

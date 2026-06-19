@@ -12,9 +12,5 @@ public:
 	void Init()override;
 	void DrawLit()override;
 	
-	//水状態を返す
-	LiquidType GetLiquidType() const override
-	{
-		return LiquidType::Water;
-	}
+	
 };

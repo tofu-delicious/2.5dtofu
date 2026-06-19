@@ -42,9 +42,6 @@ public:
 	//ギミック衝突後の分岐処理
 	void OnHitGimmick(C_GimmickBase* a_gimmick);
 
-	//形態変化
-	void ChangeForm(C_LiquidBase::LiquidType a_formType);
-
 	//消滅処理（アニメ再生 ⇒ 消滅フラグ）
 	void StartDeathAnim();
 

@@ -13,6 +13,6 @@ void C_Oil::Init()
 
 void C_Oil::DrawLit()
 {
-	KdShaderManager::Instance().m_StandardShader.DrawModel(
+ 	KdShaderManager::Instance().m_StandardShader.DrawModel(
 		*m_model, m_mWorld);
 }

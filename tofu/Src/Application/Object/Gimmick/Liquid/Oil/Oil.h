@@ -10,10 +10,4 @@ public:
 
 	void Init()     override;
 	void DrawLit()  override;
-
-	// 油形態を返す
-	LiquidType GetLiquidType() const override
-	{
-		return LiquidType::Oil;
-	}
 };

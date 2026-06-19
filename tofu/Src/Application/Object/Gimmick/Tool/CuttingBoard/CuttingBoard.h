@@ -9,5 +9,7 @@ public:
 	~C_CuttingBoard() {}
 
 	void Init()     override;
+	void Update()	override;
 	void DrawLit()  override;
+	
 };

@@ -30,6 +30,9 @@ public:
 	//デバッグ処理
 	void ImGui()	override;
 
+	//キッチンタイプ取得
+	KitchenType GetKitchenType() const { return m_kitchenType; }
+
 private:
 
 	//================= 定数 ===================
