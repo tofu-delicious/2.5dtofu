@@ -40,7 +40,7 @@ void C_Tofu::PostUpdate()
 	UpdateMatrix();
 
 	CheckRay();
-	//CheckSphere();
+	CheckSphere();
 }
 
 void C_Tofu::DrawLit()
@@ -53,18 +53,52 @@ void C_Tofu::JumpTofu()
 {
 	bool currentSpace = GetAsyncKeyState(VK_SPACE) & 0x8000;
 
-	//スペースキーの連打制御 & ジャンプしていない
-	if (currentSpace && !m_isSpaceKey && !m_isJumping)
+	//地面にいるときだけチャージ & ジャンプ受付
+	if (!m_isJumping)
 	{
-		m_gravity = -JUMP_POW_Y;
-		m_isJumping = true;
+		//押している間カウントを増やす（上限に頭打ち）
+		if (currentSpace)
+		{
+			m_chargeCount++;
+			if (m_chargeCount > MAX_CHARGE) { m_chargeCount = MAX_CHARGE; }
+		}
+
+		//離した瞬間にジャンプ発動（前フレーム押下 && 今フレーム離した）
+		if (!currentSpace && m_isSpaceKey && m_chargeCount > 0)
+		{
+			//チャージ量（0.0 ~ 1.0）からジャンプ力を線形補間
+			float chargeRatio = m_chargeCount / static_cast<float>(MAX_CHARGE);
+			float jumpPow = MIN_JUMP_POW_Y + (MAX_JUMP_POW_Y - MIN_JUMP_POW_Y) * chargeRatio;
+
+			m_gravity = -jumpPow;	//上向きの初速を与える
+			m_isJumping = true;
+			m_chargeCount = 0;		//チャージをリセット
+		}
 	}
 
 	m_isSpaceKey = currentSpace;
 
-	//重力を算出
+	//=========== 縦の移動（重力） ============
 	m_pos.y -= m_gravity;
 	m_gravity += GRAVITY_INCREMENT;
+
+	//=========== 横の移動（前進） ============
+	if (m_isJumping)
+	{
+		//ジャンプ中は前に進む
+		m_pos.x += JUMP_FORWARD;
+
+		//前進と同時に定位置（HOME_X）へ徐々に引き戻す
+		if (m_pos.x > HOME_X)
+		{
+			m_pos.x -= RETURN_SPEED;
+		}
+	}
+	else
+	{
+		//念のためジャンプしていない状態でも定位置に固定
+		m_pos.x = HOME_X;
+	}
 }
 
 void C_Tofu::UpdateMatrix()
@@ -124,8 +158,8 @@ void C_Tofu::CheckSphere()
 	//============ 球初期化処理 ================
 	KdCollider::SphereInfo sphere;			//球判定用の変数を用意
 	sphere.m_sphere.Center = m_pos;			//球の中心座標を設定
-	sphere.m_sphere.Radius = 0.3f;			//球の半径を設定
-	sphere.m_type = KdCollider::TypeGround;	//当たり判定をしたいタイプを指定
+	sphere.m_sphere.Radius = 0.1f;			//球の半径を設定
+	sphere.m_type = KdCollider::TypeBump;	//当たり判定をしたいタイプを指定
 
 	//============ デバッグ表示 ================
 	m_pDebugWire->AddDebugSphere(sphere.m_sphere.Center, sphere.m_sphere.Radius);
@@ -163,7 +197,14 @@ void C_Tofu::CheckSphere()
 		hitDir.Normalize();
 
 		m_pos += hitDir * maxOverLap;
+
+		OnHit();
 	}
+}
+
+void C_Tofu::OnHit()
+{
+	m_isExpired = true;
 }
 
 void C_Tofu::ImGui()

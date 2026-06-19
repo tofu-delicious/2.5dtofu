@@ -37,7 +37,7 @@ public:
 	void CheckSphere();
 
 	//衝突判定後の処理
-	void OnHit()override{}
+	void OnHit()override;
 
 	//ギミック衝突後の分岐処理
 	void OnHitGimmick(C_GimmickBase* a_gimmick);
@@ -54,9 +54,15 @@ private:
 
 	//=============== 定数 =================
 	static constexpr Math::Vector3 INITIAL_POS = { -0.5f,1.0f,-0.1f };
-	static constexpr float MIN_RAY_RANGE = 0.15f;						//RAYの最低保証
-	static constexpr float JUMP_POW_Y = 0.04f;							//Y軸方向のジャンプ力
-	static constexpr float GRAVITY_INCREMENT = 0.003f;				//重力減算値
+	//チャージジャンプ処理
+	static constexpr int MAX_CHARGE = 60;								//チャージ上限
+	static constexpr float MIN_JUMP_POW_Y = 0.04f;						//Y軸方向の最小ジャンプ力
+	static constexpr float MAX_JUMP_POW_Y = 0.06f;						//Y軸方向の最大ジャンプ力
+	static constexpr float GRAVITY_INCREMENT = 0.003f;					//重力減算値
+	//横移動ジャンプ処理
+	static constexpr float HOME_X = INITIAL_POS.x;						//とうふの定位置X座標
+	static constexpr float JUMP_FORWARD = 0.01f;						//ジャンプ中に前へ進む速度
+	static constexpr float RETURN_SPEED = 0.008f;						//着地にレーンへ戻る速度
 
 	//============ 状態フラグ ==============
 	bool m_isSpaceKey = false;		//キー制御
@@ -67,4 +73,5 @@ private:
 	FormType m_currentForm = FormType::Normal;
 
 	float m_gravity = 0.0f;			//重力（ジャンプ処理）
+	int m_chargeCount = 0;			//ジャンプチャージ用カウント
 };
