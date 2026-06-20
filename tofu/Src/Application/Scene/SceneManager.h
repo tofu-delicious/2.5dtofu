@@ -71,6 +71,8 @@ private :
 	// Overlayのシーン種類を保持する変数を追加
 	SceneType m_overlaySceneType = SceneType::Pause;
 
+	bool m_isPopOverlayReserved = false;	//オーバーレイ画面を消す通知
+
 private:
 
 	SceneManager() { Init(); }

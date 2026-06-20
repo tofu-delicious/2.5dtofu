@@ -204,7 +204,7 @@ void C_Tofu::CheckSphere()
 
 void C_Tofu::OnHit()
 {
-	m_isExpired = true;
+	m_isExpired = true;		//完全に非表示
 }
 
 void C_Tofu::ImGui()

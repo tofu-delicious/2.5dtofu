@@ -20,6 +20,13 @@ void GameScene::Event()
 		SceneManager::Instance().PushOverlay(SceneManager::SceneType::Pause);
 	}
 
+	//リザルト画面へ遷移
+	if (m_tofu->IsExpired() && !m_isChangeResultScene)
+	{
+		m_isChangeResultScene = true;
+		SceneManager::Instance().PushOverlay(SceneManager::SceneType::Result);
+	}
+
 	// カメラ更新
 	m_spCamera->Update();
 

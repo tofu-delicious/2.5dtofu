@@ -15,6 +15,13 @@ void SceneManager::PreUpdate()
 		ChangeScene(m_nextSceneType);
 	}
 
+	//オーバーレイ解除の予約が有効なら解除処理を行う
+	if (m_isPopOverlayReserved)
+	{
+		m_overlayScene = nullptr;
+		m_isPopOverlayReserved = false;
+	}
+
 	//Overlayがあれば優先的に更新
 	if (m_overlayScene)
 		m_overlayScene->PreUpdate();
@@ -89,7 +96,7 @@ void SceneManager::PushOverlay(SceneType _nextOverlay)
 
 void SceneManager::PopOverlay()
 {
-	m_overlayScene = nullptr;
+	m_isPopOverlayReserved = true;	//即座にオーバーレイ画面を消さず、予約だけにする
 }
 
 const std::list<std::shared_ptr<KdGameObject>>& SceneManager::GetObjList()

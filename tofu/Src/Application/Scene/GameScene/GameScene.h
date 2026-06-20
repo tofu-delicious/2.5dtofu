@@ -15,9 +15,20 @@ public:
 	GameScene();
 	~GameScene();
 
+	//m_kitchensリストをm_objListへ格納する
 	void SyncKitchensObjList();
-	void SyncGimmicksObjList(); // 追加
+
+	//m_gimmicksリストをm_objListへ格納する
+	void SyncGimmicksObjList();
+
+	//デバッグ表示させたいクラス情報を、ImGuiManagerへ送信する
 	void SetUpImGuiManager();
+
+	//ポーズ画面を表示させる
+	void DrawOverlayPauseScene();
+
+	//シーンをResultシーンへ遷移させる
+	void ChangeResultScene();
 
 private:
 
@@ -33,4 +44,7 @@ private:
 	//================= 定数 ===============
 	static constexpr Math::Vector3 CAMERA_POS = { 0.0f, 1.1f, -1.0f };
 	static constexpr float         CAMERA_ROTATE = 15.0f;
+
+	//================ 状態フラグ ==============
+	bool m_isChangeResultScene = false;		//true：リザルトシーンへ遷移する
 };
