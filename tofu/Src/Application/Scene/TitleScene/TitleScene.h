@@ -11,6 +11,13 @@ class TitleScene : public C_BaseScene
 {
 public :
 
+	//ボタンの種類
+	enum class TitleData
+	{
+		Start,
+		Sound,
+	};
+
 	TitleScene();
 	~TitleScene();
 
@@ -18,7 +25,7 @@ public :
 	void MoveCursor();
 
 	//更新内容
-	void UpdateCursorUI();
+	void UpdateCursorPos();
 
 private :
 
@@ -33,6 +40,9 @@ private :
 	static constexpr Math::Vector3 TILE_POS = { 0.0f,0.0f,0.0f };
 	static constexpr Math::Rectangle TILE_RECT = { 0,0,1280,720 };
 
+	static constexpr Math::Vector3 LINE_POS = { 0.0f,0.0f,0.0f };
+	static constexpr Math::Rectangle LINE_RECT = { 0,0,256,16 };
+
 	static constexpr Math::Vector3 START_POS = { 0.0f,0.0f,0.0f };
 	static constexpr Math::Rectangle START_RECT = { 0,0,192,64 };
 
@@ -41,19 +51,14 @@ private :
 
 	//======== インスタンス ==========
 	std::shared_ptr<C_UIBase> m_tile = nullptr;		//タイル（背景）
-	//　通常描画
-	std::shared_ptr<C_UIBase> m_startBase = nullptr;	//スタートボタン（未選択時）
-	std::shared_ptr<C_UIBase> m_soundBase = nullptr;	//サウンドボタン（未選択時）
-
-	// フェード描画
-	std::shared_ptr<C_UIFade> m_startFade = nullptr;	//スタートボタン（選択時）
-	std::shared_ptr<C_UIFade> m_soundFade = nullptr;	//サウンドボタン（選択時）
+	std::shared_ptr<C_UIBase> m_line = nullptr;		//カーソル位置
+	std::shared_ptr<C_UIBase> m_start = nullptr;	//スタートボタン
+	std::shared_ptr<C_UIBase> m_sound = nullptr;	//サウンドボタン
 
 	//========== 状態フラグ ==========
 	bool m_isUpKey = false;			//true：上キーが押された
 	bool m_isDownKey = false;		//true：下キーが押された
-	bool m_isSpaceKey = false;		//true：スペースキーが押された
 
-	//=========== 動的配列 ===========
-	int m_cursorIndex = 0;			//ボタンUIのUIBase・UIFadeの切り替え
+	//=========== 動的変数 ===========
+	TitleData m_titleData = TitleData::Start;
 };

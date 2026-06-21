@@ -221,7 +221,18 @@ bool Application::Init(int w, int h)
 	//===================================================================
 	C_AssetManager::Instance().ReadFile("AssetData.txt");
 
+	//===================================================================
+	// キー制御の初期化
+	//===================================================================
+	//"keyboard"という名前でデバイスを1つ作る
+	auto keyboard = std::make_unique<KdInputCollector>();
+	//ボタンを名前付きで登録（複数キーをまとｍて1つのボタンにできる）
+	keyboard->AddButton("Pause", new KdInputButtonForWindows('Q'));			//ポーズ画面表示用
+	keyboard->AddButton("Select", new KdInputButtonForWindows(VK_SPACE));	//決定
 
+	//デバイスをマネージャーに登録
+	KdInputManager::Instance().AddDevice("Keyboard", keyboard);
+	
 	// 例えばカーソルを消したい場合
 	//ShowCursor(false);
 

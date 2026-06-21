@@ -23,6 +23,10 @@ private:
 	static constexpr Math::Vector3 CAMERA_POS = { 0.0f,1.0f,-1.0f };
 	static constexpr float CAMERA_ROTATE = 10.0f;
 
+	static constexpr Math::Vector3 BACKGROUND_POS = { 0.0f,0.0f,0.0f };
+	static constexpr Math::Rectangle BACKGROUND_RECT = { 0,0,1280,720 };
+	static constexpr float BACKGROUND_ALPHA = 0.6f;
+
 	static constexpr Math::Vector3 BACK_POS = { 0.0f,0.0f,0.0f };
 	static constexpr Math::Rectangle BACK_RECT = { 0,0,224,288 };
 
@@ -36,8 +40,9 @@ private:
 	static constexpr Math::Rectangle TITLE_RECT = { 0,128,192,64 };
 
 	//======== インスタンス ==========
-	std::shared_ptr<C_UIBase> m_back = nullptr;		//背景
-	std::shared_ptr<C_UIBase> m_resume = nullptr;	//続けるボタン
-	std::shared_ptr<C_UIBase> m_retry = nullptr;	//リトライボタン
-	std::shared_ptr<C_UIBase> m_title = nullptr;	//タイトルボタン
+	std::shared_ptr<C_UIBase> m_backGround = nullptr;	//半透明の背景
+	std::shared_ptr<C_UIBase> m_back = nullptr;			//背景
+	std::shared_ptr<C_UIBase> m_resume = nullptr;		//続けるボタン
+	std::shared_ptr<C_UIBase> m_retry = nullptr;		//リトライボタン
+	std::shared_ptr<C_UIBase> m_title = nullptr;		//タイトルボタン
 };

@@ -13,6 +13,13 @@ void C_UIBase::Init(const Math::Vector3& a_pos, const Math::Rectangle& a_rect, s
 	m_isActive = false;
 }
 
+void C_UIBase::Update()
+{
+	Math::Matrix scaleMat = Math::Matrix::CreateScale(m_scaleX, m_scaleY, 1.0f);
+	Math::Matrix transMat = Math::Matrix::CreateTranslation(m_pos);
+	m_mWorld = scaleMat * transMat;   // 先にスケール(原点基準)、その後で平行移動
+}
+
 void C_UIBase::DrawSprite()
 {
 	if (!m_isActive)return;
@@ -20,5 +27,6 @@ void C_UIBase::DrawSprite()
 	//不透明度指定
 	Math::Color color(1.0f, 1.0f, 1.0f, m_alpha);
 
-	KdShaderManager::Instance().m_spriteShader.DrawTex(m_tex, m_pos.x,m_pos.y,m_rect.width,m_rect.height, &m_rect, &color);
+	KdShaderManager::Instance().m_spriteShader.SetMatrix(m_mWorld);
+	KdShaderManager::Instance().m_spriteShader.DrawTex(m_tex,0,0,m_rect.width,m_rect.height, &m_rect, &color);
 }

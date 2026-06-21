@@ -300,6 +300,7 @@
     <ClInclude Include="Src\Application\Scene\SceneManager.h" />
     <ClInclude Include="Src\Application\Scene\SettingScene\SettingScene.h" />
     <ClInclude Include="Src\Application\Scene\TitleScene\TitleScene.h" />
+    <ClInclude Include="Src\Application\Sound\SoundManager.h" />
     <ClInclude Include="Src\Application\UI\UIAppearFade\UIAppearFade.h" />
     <ClInclude Include="Src\Application\UI\UIBase\UIBase.h" />
     <ClInclude Include="Src\Application\UI\UIFade\UIFade.h" />
@@ -378,6 +379,7 @@
     <ClCompile Include="Src\Application\Scene\SceneManager.cpp" />
     <ClCompile Include="Src\Application\Scene\SettingScene\SettingScene.cpp" />
     <ClCompile Include="Src\Application\Scene\TitleScene\TitleScene.cpp" />
+    <ClCompile Include="Src\Application\Sound\SoundManager.cpp" />
     <ClCompile Include="Src\Application\UI\UIAppearFade\UIAppearFade.cpp" />
     <ClCompile Include="Src\Application\UI\UIBase\UIBase.cpp" />
     <ClCompile Include="Src\Application\UI\UIFade\UIFade.cpp" />

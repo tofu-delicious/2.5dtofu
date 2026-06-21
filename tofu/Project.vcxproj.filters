@@ -43,9 +43,6 @@
     <Filter Include="Src\Framework\GameObject">
       <UniqueIdentifier>{d45ba257-913b-44e3-a012-888d7b6f2b68}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Src\Framework\Input">
-      <UniqueIdentifier>{9bd33b87-53db-4bc0-b98d-80db98f4ba9b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Src\Framework\Direct3D\Polygon">
       <UniqueIdentifier>{b91bce2d-4487-485a-a855-b2bb6ce0d30b}</UniqueIdentifier>
     </Filter>
@@ -166,6 +163,9 @@
     <Filter Include="Src\Application\Object\Gimmick\Tool\CuttingBoard">
       <UniqueIdentifier>{d73a7ac4-dc54-47dc-8321-10f0a839e3ca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\Sound">
+      <UniqueIdentifier>{9855c6aa-1ad4-41ae-a7e6-261405e751bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -248,9 +248,6 @@
     </ClInclude>
     <ClInclude Include="Src\Framework\GameObject\KdGameObjectFactory.h">
       <Filter>Src\Framework\GameObject</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Framework\Input\KdInput.h">
-      <Filter>Src\Framework\Input</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\Utility\KdCSVData.h">
       <Filter>Src\Framework\Utility</Filter>
@@ -417,6 +414,10 @@
     <ClInclude Include="Src\Application\Object\Gimmick\GimmickManager.h">
       <Filter>Src\Application\Object\Gimmick</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Framework\Input\KdInput.h" />
+    <ClInclude Include="Src\Application\Sound\SoundManager.h">
+      <Filter>Src\Application\Sound</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pch.cpp">
@@ -481,9 +482,6 @@
     </ClCompile>
     <ClCompile Include="Src\Framework\GameObject\KdGameObjectFactory.cpp">
       <Filter>Src\Framework\GameObject</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Framework\Input\KdInput.cpp">
-      <Filter>Src\Framework\Input</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\Utility\KdCSVData.cpp">
       <Filter>Src\Framework\Utility</Filter>
@@ -637,6 +635,10 @@
     </ClCompile>
     <ClCompile Include="Src\Application\Object\Gimmick\GimmickManager.cpp">
       <Filter>Src\Application\Object\Gimmick</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Input\KdInput.cpp" />
+    <ClCompile Include="Src\Application\Sound\SoundManager.cpp">
+      <Filter>Src\Application\Sound</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

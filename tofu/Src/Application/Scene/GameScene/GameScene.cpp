@@ -15,7 +15,7 @@ GameScene::~GameScene() {}
 void GameScene::Event()
 {
 	// ポーズ画面表示
-	if (GetAsyncKeyState('Q') & 0x8000)
+	if(KdInputManager::Instance().IsPress("Pause"))
 	{
 		SceneManager::Instance().PushOverlay(SceneManager::SceneType::Pause);
 	}

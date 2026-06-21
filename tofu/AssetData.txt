@@ -1,7 +1,15 @@
+Texture BackGround Asset/Textures/AllScene/baseBackGround.png
 Texture Tile Asset/Textures/AllScene/tile3.png
+Texture Line Asset/Textures/AllScene/line.png
 Texture TitleButton Asset/Textures/TitleScene/titleButton.png
+Texture SettingButton Asset/Textures/SettingScene/settingButton.png
+Texture SettingBack Asset/Textures/SettingScene/settingBack.png
+Texture Frame Asset/Textures/SettingScene/soundFrame.png
+Texture Bar Asset/Textures/SettingScene/soundBar.png
 Texture PauseButton Asset/Textures/PauseScene/pauseButton.png
 Texture PauseBack Asset/Textures/PauseScene/pauseBack.png
+Texture ResultButton Asset/Textures/ResultScene/resultButton.png
+Texture ResultBack Asset/Textures/ResultScene/resultBack.png
 Polygon Tile Asset/Textures/AllScene/tile3.png
 Model Tofu Asset/Models/Tofu/Tofu/tofu.gltf
 Model Kitchen Asset/Models/Kitchen/Kitchen/kitchen.gltf

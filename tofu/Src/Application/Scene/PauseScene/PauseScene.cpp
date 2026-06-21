@@ -13,7 +13,7 @@ C_PauseScene::~C_PauseScene(){}
 
 void C_PauseScene::Event()
 {
-	if (GetAsyncKeyState('Q') & 0x8000)
+	if (KdInputManager::Instance().IsPress("Pause"))
 	{
 		SceneManager::Instance().PopOverlay();
 	}
@@ -24,12 +24,19 @@ void C_PauseScene::Event()
 void C_PauseScene::Init()
 {
 	//画像ロード
+	std::shared_ptr<KdTexture> backGroundTex = C_AssetManager::Instance().GetTex("BackGround");
 	std::shared_ptr<KdTexture> backTex = C_AssetManager::Instance().GetTex("PauseBack");
 	std::shared_ptr<KdTexture> buttonTex = C_AssetManager::Instance().GetTex("PauseButton");
 
 	//カメラ
 	m_spCamera = std::make_shared<C_Camera>();
 	m_spCamera->Init(CAMERA_POS, CAMERA_ROTATE);
+
+	//半透明の背景
+	m_backGround = std::make_shared<C_UIBase>();
+	m_backGround->Init(BACKGROUND_POS, BACKGROUND_RECT, backGroundTex, BACKGROUND_ALPHA);
+	m_backGround->SetActive(true);
+	AddObject(m_backGround);
 
 	//背景
 	m_back = std::make_shared<C_UIBase>();

@@ -16,8 +16,16 @@ public:
 		float a_scaleY = 1.0f,
 		float a_rotate = 0.0f);
 
+	void Update()override;
+
 	void DrawSprite()override;
 
+	//============== ゲッター ===============
+	Math::Vector3 GetPos() { return m_pos; }
+
+	//============== セッター ===============
+	void SetPos(Math::Vector3 a_pos) { m_pos = a_pos; }
+	void SetScale(float a_scaleX) { m_scaleX = a_scaleX; };
 	void SetActive(bool a_isActive) { m_isActive = a_isActive; }
 
 protected:
