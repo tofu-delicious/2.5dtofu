@@ -15,9 +15,6 @@ void C_SettingScene::Event()
 {
 	//カーソル移動
 	MoveCursor();
-
-	//カメラ
-	m_spCamera->Update();
 }
 
 void C_SettingScene::Init()
@@ -29,10 +26,6 @@ void C_SettingScene::Init()
 	std::shared_ptr<KdTexture> buttonTex = C_AssetManager::Instance().GetTex("SettingButton");
 	std::shared_ptr<KdTexture> frameTex = C_AssetManager::Instance().GetTex("Frame");
 	std::shared_ptr<KdTexture> barTex = C_AssetManager::Instance().GetTex("Bar");
-
-	//カメラ
-	m_spCamera = std::make_shared<C_Camera>();
-	m_spCamera->Init(CAMERA_POS, CAMERA_ROTATE);
 
 	//インスタンス化
 	m_backGround = std::make_unique<C_UIBase>();

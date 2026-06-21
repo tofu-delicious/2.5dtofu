@@ -14,16 +14,10 @@ TitleScene::~TitleScene(){}
 void TitleScene::Event()
 {
 	MoveCursor();
-
-	m_spCamera->Update();
 }
 
 void TitleScene::Init()
 {
-	//カメラ
-	m_spCamera = std::make_shared<C_Camera>();
-	m_spCamera->Init(CAMERA_POS,CAMERA_ROTATE);
-
 	//画像データロード
 	std::shared_ptr<KdTexture> tileTex = C_AssetManager::Instance().GetTex("Tile");
 	std::shared_ptr<KdTexture> lineTex = C_AssetManager::Instance().GetTex("Line");	

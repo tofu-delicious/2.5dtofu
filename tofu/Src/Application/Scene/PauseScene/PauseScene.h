@@ -20,9 +20,6 @@ private:
 	void Init()  override;
 
 	//============ 定数 ==============
-	static constexpr Math::Vector3 CAMERA_POS = { 0.0f,1.0f,-1.0f };
-	static constexpr float CAMERA_ROTATE = 10.0f;
-
 	static constexpr Math::Vector3 BACKGROUND_POS = { 0.0f,0.0f,0.0f };
 	static constexpr Math::Rectangle BACKGROUND_RECT = { 0,0,1280,720 };
 	static constexpr float BACKGROUND_ALPHA = 0.6f;

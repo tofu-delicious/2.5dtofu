@@ -34,8 +34,6 @@ private :
 	void Init()  override;
 
 	//============ 定数 ==============
-	static constexpr Math::Vector3 CAMERA_POS = { 0.0f,0.0f,-1.0f };
-	static constexpr float CAMERA_ROTATE = 0.0f;
 
 	static constexpr Math::Vector3 TILE_POS = { 0.0f,0.0f,0.0f };
 	static constexpr Math::Rectangle TILE_RECT = { 0,0,1280,720 };

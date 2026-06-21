@@ -17,8 +17,6 @@ void C_PauseScene::Event()
 	{
 		SceneManager::Instance().PopOverlay();
 	}
-
-	m_spCamera->Update();
 }
 
 void C_PauseScene::Init()
@@ -27,10 +25,6 @@ void C_PauseScene::Init()
 	std::shared_ptr<KdTexture> backGroundTex = C_AssetManager::Instance().GetTex("BackGround");
 	std::shared_ptr<KdTexture> backTex = C_AssetManager::Instance().GetTex("PauseBack");
 	std::shared_ptr<KdTexture> buttonTex = C_AssetManager::Instance().GetTex("PauseButton");
-
-	//カメラ
-	m_spCamera = std::make_shared<C_Camera>();
-	m_spCamera->Init(CAMERA_POS, CAMERA_ROTATE);
 
 	//半透明の背景
 	m_backGround = std::make_shared<C_UIBase>();
